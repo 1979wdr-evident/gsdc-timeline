@@ -15,7 +15,6 @@
             --gsdc-blue: #2C5AA0;
             --gsdc-orange: #FF6B35;
             --gsdc-light-blue: #E8F1FF;
-            --gsdc-dark-blue: #1A4180;
             --success: #22C55E;
             --warning: #F59E0B;
             --danger: #EF4444;
@@ -42,10 +41,6 @@
             margin-bottom: 0.5rem;
         }
 
-        .header p {
-            color: #666;
-        }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -67,10 +62,6 @@
             margin-bottom: 1rem;
         }
 
-        .controls-row:last-child {
-            margin-bottom: 0;
-        }
-
         .btn {
             padding: 0.75rem 1.5rem;
             border: none;
@@ -78,9 +69,6 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            text-align: center;
         }
 
         .btn-primary {
@@ -88,19 +76,9 @@
             color: white;
         }
 
-        .btn-primary:hover {
-            background: var(--gsdc-dark-blue);
-            transform: translateY(-1px);
-        }
-
         .btn-success {
             background: var(--success);
             color: white;
-        }
-
-        .btn-success:hover {
-            background: #16A34A;
-            transform: translateY(-1px);
         }
 
         .btn-warning {
@@ -108,14 +86,8 @@
             color: white;
         }
 
-        .btn-secondary {
-            background: #6B7280;
-            color: white;
-        }
-
-        .btn-danger {
-            background: var(--danger);
-            color: white;
+        .btn:hover {
+            transform: translateY(-1px);
         }
 
         .search-input {
@@ -124,11 +96,6 @@
             border: 2px solid var(--border);
             border-radius: 5px;
             font-size: 1rem;
-        }
-
-        .search-input:focus {
-            outline: none;
-            border-color: var(--gsdc-blue);
         }
 
         .initiatives-grid {
@@ -144,15 +111,6 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             border-left: 4px solid var(--gsdc-blue);
         }
-
-        .initiative-card.pillar-1 { border-left-color: var(--gsdc-blue); }
-        .initiative-card.pillar-2 { border-left-color: var(--gsdc-orange); }
-        .initiative-card.pillar-3 { border-left-color: var(--gsdc-dark-blue); }
-        .initiative-card.addition-1 { border-left-color: #8B5CF6; }
-        .initiative-card.addition-2 { border-left-color: #06B6D4; }
-        .initiative-card.addition-3 { border-left-color: #10B981; }
-        .initiative-card.addition-4 { border-left-color: #F59E0B; }
-        .initiative-card.addition-5 { border-left-color: #EF4444; }
 
         .initiative-header {
             display: flex;
@@ -207,6 +165,20 @@
             font-size: 0.8rem;
         }
 
+        .progress-bar {
+            background: var(--border);
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 0.5rem;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--success);
+            transition: width 0.3s ease;
+        }
+
         .modal {
             display: none;
             position: fixed;
@@ -224,7 +196,7 @@
             padding: 0;
             border-radius: 8px;
             width: 90%;
-            max-width: 800px;
+            max-width: 600px;
             max-height: 90vh;
             overflow-y: auto;
         }
@@ -241,7 +213,6 @@
 
         .modal-header h3 {
             margin: 0;
-            font-size: 1.3rem;
         }
 
         .close {
@@ -249,10 +220,6 @@
             font-size: 1.5rem;
             font-weight: bold;
             cursor: pointer;
-        }
-
-        .close:hover {
-            opacity: 0.8;
         }
 
         .modal-body {
@@ -285,13 +252,6 @@
             resize: vertical;
         }
 
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--gsdc-blue);
-        }
-
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -308,95 +268,6 @@
             gap: 1rem;
         }
 
-        .progress-bar {
-            background: var(--border);
-            height: 8px;
-            border-radius: 4px;
-            overflow: hidden;
-            margin-bottom: 0.5rem;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: var(--success);
-            transition: width 0.3s ease;
-        }
-
-        .list-items {
-            margin-bottom: 1rem;
-        }
-
-        .list-item {
-            background: var(--bg-light);
-            padding: 0.75rem;
-            border-radius: 4px;
-            margin-bottom: 0.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .list-item-text {
-            flex: 1;
-        }
-
-        .list-item-actions {
-            display: flex;
-            gap: 0.5rem;
-        }
-
-        .list-item-actions button {
-            padding: 0.25rem 0.5rem;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-            font-size: 0.8rem;
-        }
-
-        .add-item-form {
-            display: flex;
-            gap: 0.5rem;
-            margin-top: 0.5rem;
-        }
-
-        .add-item-input {
-            flex: 1;
-            padding: 0.5rem;
-            border: 1px solid var(--border);
-            border-radius: 4px;
-        }
-
-        .settings-section {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .settings-title {
-            color: var(--gsdc-blue);
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .status-badge {
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: white;
-        }
-
-        .status-badge.connected {
-            background: var(--success);
-        }
-
-        .status-badge.disconnected {
-            background: var(--danger);
-        }
-
         .hidden {
             display: none !important;
         }
@@ -406,11 +277,6 @@
                 padding: 1rem;
             }
             
-            .controls-row {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            
             .form-row {
                 grid-template-columns: 1fr;
             }
@@ -418,10 +284,6 @@
             .initiative-header {
                 flex-direction: column;
                 gap: 1rem;
-            }
-            
-            .initiative-actions {
-                flex-wrap: wrap;
             }
         }
     </style>
@@ -433,9 +295,6 @@
     </header>
 
     <div class="container">
-        <!-- GitHub settings section removed - credentials now hardcoded -->
-
-        <!-- Controls -->
         <div class="controls">
             <div class="controls-row">
                 <input type="text" class="search-input" id="searchInput" placeholder="Search initiatives..." onkeyup="filterInitiatives()">
@@ -444,29 +303,16 @@
                     <option value="pillar-1">Pillar 1: Unified Leadership</option>
                     <option value="pillar-2">Pillar 2: Business Support</option>
                     <option value="pillar-3">Pillar 3: Amplifying Return</option>
-                    <option value="addition-1">Addition 1: Civic Infrastructure</option>
-                    <option value="addition-2">Addition 2: Industry Clusters</option>
-                    <option value="addition-3">Addition 3: Federal Funding</option>
-                    <option value="addition-4">Addition 4: Housing & Land</option>
-                    <option value="addition-5">Addition 5: Talent Return</option>
-                </select>
-                <select id="statusFilter" onchange="filterInitiatives()">
-                    <option value="">All Statuses</option>
-                    <option value="not-started">Not Started</option>
-                    <option value="in-progress">In Progress</option>
-                    <option value="completed">Completed</option>
-                    <option value="delayed">Delayed</option>
                 </select>
             </div>
             <div class="controls-row">
                 <button class="btn btn-primary" onclick="addInitiative()">+ Add Initiative</button>
-                <button class="btn btn-success" onclick="saveChanges()">💾 Save to GitHub</button>
-                <button class="btn btn-warning" onclick="loadFromGitHub()">🔄 Load from GitHub</button>
-                <a href="gsdc_timeline_display.html" class="btn btn-secondary" target="_blank">👁️ View Timeline</a>
+                <button class="btn btn-success" onclick="saveChanges()">Save to GitHub</button>
+                <button class="btn btn-warning" onclick="loadFromGitHub()">Load from GitHub</button>
+                <a href="gsdc_timeline_display.html" class="btn" style="background: #666; color: white; text-decoration: none;">View Timeline</a>
             </div>
         </div>
 
-        <!-- Initiatives List -->
         <div id="initiativesList" class="initiatives-grid">
             <!-- Populated by JavaScript -->
         </div>
@@ -492,11 +338,6 @@
                                 <option value="pillar-1">Pillar 1: Unified Leadership</option>
                                 <option value="pillar-2">Pillar 2: Business Support</option>
                                 <option value="pillar-3">Pillar 3: Amplifying Return</option>
-                                <option value="addition-1">Addition 1: Civic Infrastructure</option>
-                                <option value="addition-2">Addition 2: Industry Clusters</option>
-                                <option value="addition-3">Addition 3: Federal Funding</option>
-                                <option value="addition-4">Addition 4: Housing & Land</option>
-                                <option value="addition-5">Addition 5: Talent Return</option>
                             </select>
                         </div>
                     </div>
@@ -508,7 +349,7 @@
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="editStartQuarter">Start Quarter (0-15, where 0=Q1 2026)</label>
+                            <label for="editStartQuarter">Start Quarter (0-15)</label>
                             <input type="number" id="editStartQuarter" min="0" max="15" required>
                         </div>
                         <div class="form-group">
@@ -537,628 +378,18 @@
                         <label for="editLeads">Project Leads</label>
                         <input type="text" id="editLeads" required>
                     </div>
-
-                    <div class="form-group">
-                        <label>Deliverables</label>
-                        <div id="deliverablesList" class="list-items"></div>
-                        <div class="add-item-form">
-                            <input type="text" id="newDeliverable" class="add-item-input" placeholder="Add new deliverable...">
-                            <button type="button" class="btn btn-primary" onclick="addDeliverable()">Add</button>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Success Metrics (Read-only)</label>
-                        <div id="metricsList" class="list-items"></div>
-                        <p style="color: #666; font-size: 0.9rem; font-style: italic; margin-top: 0.5rem;">
-                            Metrics are defined in the strategic plan and cannot be edited here.
-                        </p>
-                    </div>
                 </form>
             </div>
             <div class="form-actions">
-                <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
-                <button type="button" class="btn btn-danger" onclick="deleteInitiative()" id="deleteBtn">Delete</button>
+                <button type="button" class="btn" style="background: #666; color: white;" onclick="closeModal()">Cancel</button>
                 <button type="button" class="btn btn-success" onclick="saveInitiative()">Save Changes</button>
             </div>
         </div>
     </div>
 
     <script>
-        // Timeline data - corrected from strategic plan
-        let timelineData = [
-            {
-                id: 'p1-messaging',
-                name: 'Regional Messaging Toolkit',
-                category: 'pillar-1',
-                categoryLabel: 'Pillar 1: Unified Leadership',
-                startQuarter: 2, // Q3 2026 (corrected)
-                duration: 2,
-                status: 'not-started',
-                progress: 0,
-                description: 'Develop a shared set of key messages, visuals, and data points to align how partners communicate the region\'s identity and priorities.',
-                deliverables: [
-                    '"5-Point Regional Message Card"',
-                    'Co-branded visuals and language assets',
-                    'Customizable messaging for talent, infrastructure, business climate',
-                    'Distribution to elected officials, business leaders, schools, chambers'
-                ],
-                leads: 'Tammy and Jennie (GSDC), comms staff, Marketing Committee, CVB, partner Chambers, city managers',
-                metrics: [
-                    'Distribution reach: 100% of partners by Q3 2026',
-                    'Usage rate: 75% partners actively using within 12 months',
-                    'Social engagement: 20% increase across partner channels',
-                    'Downloads: 250+ in Year 1'
-                ]
-            },
-            {
-                id: 'p1-roundtables',
-                name: 'Infrastructure & Policy Roundtables',
-                category: 'pillar-1',
-                categoryLabel: 'Pillar 1: Unified Leadership',
-                startQuarter: 2, // Q3 2026 launch (corrected)
-                duration: 14,
-                status: 'not-started',
-                progress: 0,
-                description: 'Host annual roundtables with city, county, school, and economic development leaders to coordinate capital planning, permitting, and legislative strategy.',
-                deliverables: [
-                    'Project pipeline by stage',
-                    'Funding applications in progress',
-                    'Shared permitting/zoning priorities',
-                    'Policy alignment opportunities'
-                ],
-                leads: 'NeTia and Leslie (GSDC), city and county staff, Dan Weber (Initiative Foundation), BEP, public works directors',
-                metrics: [
-                    '≥ 90% of invited stakeholders attend annually',
-                    '3 collaborative funding applications influenced each year',
-                    '1-2 regionally aligned bonding/policy requests per legislative session'
-                ]
-            },
-            {
-                id: 'p1-onboarding',
-                name: 'Civic Onboarding Protocol',
-                category: 'pillar-1',
-                categoryLabel: 'Pillar 1: Unified Leadership',
-                startQuarter: 0, // Q1 2026
-                duration: 16,
-                status: 'not-started',
-                progress: 0,
-                description: 'Develop and deliver a regional onboarding experience for new elected officials, public-sector staff, and institutional leaders.',
-                deliverables: [
-                    'Regional Onboarding Packet with key partners and priorities',
-                    'GSDC Welcome Letter from Board Chair',
-                    '1:1 strategic briefings with NeTia or staff designee'
-                ],
-                leads: 'Tammy (design), NeTia (outreach), Board Chair and volunteers',
-                metrics: [
-                    '100% packet delivery',
-                    '≥ 80% 1:1 completion rate',
-                    '≥ 50% of new leaders participate in at least one GSDC event/initiative within 6 months'
-                ]
-            },
-            {
-                id: 'p1-playbook',
-                name: 'Public Investment Playbook',
-                category: 'pillar-1',
-                categoryLabel: 'Pillar 1: Unified Leadership',
-                startQuarter: 2, // Q3 2026
-                duration: 3,
-                status: 'not-started',
-                progress: 0,
-                description: 'A shared reference guide listing top regional infrastructure priorities with project status, costs, and lead agencies—used for strategic fundraising and alignment.',
-                deliverables: [
-                    '5-8 top priority projects (broadband, housing, downtowns, roads)',
-                    'Project status: shovel-ready, permitting, concept',
-                    'Key agency leads and estimated costs'
-                ],
-                leads: 'Leslie and Tammy (GSDC), joint partner task force, city/county staff',
-                metrics: [
-                    '5-8 priority projects included and tracked',
-                    '$5M secured by 2029',
-                    '≥ 50% of projects with cross-jurisdictional support'
-                ]
-            },
-
-            // Pillar 2
-            {
-                id: 'p2-startup-journey',
-                name: 'Startup Journey Map & Mentorship',
-                category: 'pillar-2',
-                categoryLabel: 'Pillar 2: Business Support',
-                startQuarter: 0, // Q1 2026
-                duration: 6,
-                status: 'not-started',
-                progress: 0,
-                description: 'Clarify the "idea-to-exit" business growth path and launch a structured mentorship network to guide founders and early-stage employers.',
-                deliverables: [
-                    'Regional Startup Journey Map (print + interactive)',
-                    'Founder Mentorship Exchange',
-                    '"Investor Access Guide" + annual pitch nights'
-                ],
-                leads: 'Leslie and Jennie (GSDC), Initiative Foundation, SBDC, Great North Labs, private investors',
-                metrics: [
-                    '1 ecosystem map created and published',
-                    '1 investor access guide produced',
-                    'Startups supported → +10-15% increase over 2026 baseline'
-                ]
-            },
-            {
-                id: 'p2-bre-cycles',
-                name: 'Sector-Based BRE Cycles',
-                category: 'pillar-2',
-                categoryLabel: 'Pillar 2: Business Support',
-                startQuarter: 1, // Q2 2026
-                duration: 14,
-                status: 'not-started',
-                progress: 0,
-                description: 'Modernize BRE strategy by organizing outreach by industry cluster and firm size—targeting specific expansion barriers.',
-                deliverables: [
-                    'Targeted BRE visits by sector and firm size',
-                    'Quarterly BRE Briefing Sheets'
-                ],
-                leads: 'GSDC economic development team, city economic partners, SCSU for data analysis',
-                metrics: [
-                    '# of BRE visits: Goal of 100 annually, with 60% in primary sectors',
-                    '% of firms receiving structured follow-up: +10-15% over 2026 baseline',
-                    '# of businesses supported in expansion: +10-15% over 2026 baseline'
-                ]
-            },
-            {
-                id: 'p2-capital-access',
-                name: 'Capital Access Mapping & Coaching',
-                category: 'pillar-2',
-                categoryLabel: 'Pillar 2: Business Support',
-                startQuarter: 1, // Q2 2026
-                duration: 12,
-                status: 'not-started',
-                progress: 0,
-                description: 'Create a centralized capital navigation system for businesses—covering grants, loans, equity, and SSBCI pathways.',
-                deliverables: [
-                    'Regional Capital Landscape Guide',
-                    '1:1 Capital Coaching Sessions',
-                    '"Equity Prep" workshops'
-                ],
-                leads: 'GSDC, SBDC, local banks, capital mapping partners',
-                metrics: [
-                    'Workshops: ≥ 5 annually',
-                    'Businesses receiving support: +10% increase over 2025 baseline',
-                    'Capital raised via GSDC pathways: tracked narratively'
-                ]
-            },
-            {
-                id: 'p2-succession',
-                name: 'Business Succession & Continuity',
-                category: 'pillar-2',
-                categoryLabel: 'Pillar 2: Business Support',
-                startQuarter: 1, // Q2 2026
-                duration: 10,
-                status: 'not-started',
-                progress: 0,
-                description: 'Help owners in transition with tools, financial matchmaking, and successor support—especially in rural and legacy sectors.',
-                deliverables: [
-                    'Succession Toolkit',
-                    'Business-to-Business Acquisition Matchmaking',
-                    'Lender Partnerships'
-                ],
-                leads: 'GSDC, CPAs, estate attorneys, local lenders',
-                metrics: [
-                    'Succession Toolkit Downloads: 60 by 2029',
-                    'Transitions Supported: ≥ 5 demonstration cases',
-                    'Businesses Supported in Continuity: +10% annually over 2026 baseline'
-                ]
-            },
-
-            // Pillar 3
-            {
-                id: 'p3-investor-tiers',
-                name: 'Relaunched Investor Tier Model',
-                category: 'pillar-3',
-                categoryLabel: 'Pillar 3: Amplifying Return',
-                startQuarter: -1, // Q4 2025 (completed)
-                duration: 4,
-                status: 'completed',
-                progress: 100,
-                description: 'Modernize GSDC\'s investor tiers to clearly link financial commitments with visibility, involvement, and regional impact.',
-                deliverables: [
-                    'New tier descriptions w/ benefits, outcomes, and engagement pathways',
-                    'Tier onboarding kits and branded welcome tools'
-                ],
-                leads: 'NeTia (GSDC), SAC team, investor relations volunteers, ops support',
-                metrics: [
-                    'Investor renewals at same or higher tier → +10% over 2026 baseline',
-                    'Average annual investor contribution → +5-10% increase',
-                    'Overall investor retention rate → maintain at ≥ 85%'
-                ]
-            },
-            {
-                id: 'p3-roi-dashboard',
-                name: 'Quarterly ROI Dashboard & Video Briefings',
-                category: 'pillar-3',
-                categoryLabel: 'Pillar 3: Amplifying Return',
-                startQuarter: 0, // Q1 2026
-                duration: 16,
-                status: 'in-progress',
-                progress: 20,
-                description: 'Deliver investor updates through a lightweight, consistent format that\'s visual, digestible, and usable in meetings or pitches.',
-                deliverables: [
-                    '2-page Quarterly Impact Brief',
-                    'Interactive digital dashboard',
-                    '3-minute video updates'
-                ],
-                leads: 'Jennie and Tammy (GSDC), comms team, investor services group',
-                metrics: [
-                    'Open & engagement rates → +10% annually over 2026 baseline',
-                    'Documented usage → +10% annually',
-                    'Quarterly satisfaction rating → Maintain ≥ 4.5/5'
-                ]
-            },
-            {
-                id: 'p3-investor-forums',
-                name: 'Investor Experience Forums & Recognition',
-                category: 'pillar-3',
-                categoryLabel: 'Pillar 3: Amplifying Return',
-                startQuarter: 1, // Q2 2026
-                duration: 14,
-                status: 'not-started',
-                progress: 0,
-                description: 'Host strategic, high-energy convenings that connect investors to outcomes, celebrate impact, and offer networking value.',
-                deliverables: [
-                    '2 thematic forums/year',
-                    'Investor of the Month spotlight & annual recognition awards',
-                    '"Impact in Action" walk-throughs'
-                ],
-                leads: 'Strategic pillar leads, comms + events team, investor ops group',
-                metrics: [
-                    'Forum attendance & cross-sector participation → +10% annually',
-                    'New pledges or upgraded tiers post-forum → +10% annually',
-                    'Media/social reach from recognitions → +10% annually'
-                ]
-            }
-
-            // Strategic Addition 1: Civic Infrastructure & Leadership Continuity
-            {
-                id: 'sa1-transition-playbook',
-                name: 'Civic Transition Playbook',
-                category: 'addition-1',
-                categoryLabel: 'Addition 1: Civic Infrastructure',
-                startQuarter: 0, // Q1 2026
-                duration: 16,
-                status: 'not-started',
-                progress: 0,
-                description: 'A region-branded onboarding guide for new public leaders—delivered within 60 days of election or appointment.',
-                deliverables: [
-                    'GSDC\'s mission and current regional plan',
-                    'Partner map and contact matrix',
-                    'Regional talking points and infrastructure priorities'
-                ],
-                leads: 'GSDC staff and board with input from city/county leadership',
-                metrics: [
-                    '% of new leaders onboarded within 60 days → +10% annually over 2026 baseline (target ≥ 80% by 2029)',
-                    'Awareness & satisfaction scores → Maintain or improve by +10% annually over 2026 baseline',
-                    'Continuity of initiatives across transitions → +10% annually over 2026 baseline'
-                ]
-            },
-            {
-                id: 'sa1-leadership-dashboard',
-                name: 'Leadership Alignment Dashboard',
-                category: 'addition-1',
-                categoryLabel: 'Addition 1: Civic Infrastructure',
-                startQuarter: 2, // Q3 2026
-                duration: 12,
-                status: 'not-started',
-                progress: 0,
-                description: 'An internal tool to map public and institutional leaders, monitor transitions, and track alignment opportunities.',
-                deliverables: [
-                    'Leader directory with term dates and affiliations',
-                    'Committee and task force participation',
-                    'Status indicators for regional initiative alignment'
-                ],
-                leads: 'Strategic operations staff with civic partnerships oversight',
-                metrics: [
-                    'Contact & role data accuracy → +10% annually over 2026 baseline',
-                    'Participation in cross-sector efforts → +10% annually over 2026 baseline',
-                    'New collaborations or initiatives launched → +10% annually over 2026 baseline'
-                ]
-            },
-            {
-                id: 'sa1-policy-briefings',
-                name: 'Policy Pulse Briefings',
-                category: 'addition-1',
-                categoryLabel: 'Addition 1: Civic Infrastructure',
-                startQuarter: 1, // Q2 2026
-                duration: 14,
-                status: 'not-started',
-                progress: 0,
-                description: 'Annual nonpartisan briefings for civic leaders—focused on high-priority regional topics, timelines, and coordination points.',
-                deliverables: [
-                    '45-minute sessions (virtual or in-person)',
-                    'Top 3 regional priorities per session',
-                    'Pre-brief packet + post-brief call-to-action'
-                ],
-                leads: 'GSDC with planning/policy partners (e.g., DEED, Initiative Foundation)',
-                metrics: [
-                    'Attendance & repeat participation → +10% annually over 2026 baseline',
-                    'Knowledge retention & feedback → +10% annually over 2026 baseline',
-                    'Follow-up actions initiated → +10% annually over 2026 baseline'
-                ]
-            },
-
-            // Strategic Addition 2: Industry Specialization & Cluster Strategy
-            {
-                id: 'sa2-cluster-framework',
-                name: 'Regional Cluster Identity Framework',
-                category: 'addition-2',
-                categoryLabel: 'Addition 2: Industry Clusters',
-                startQuarter: 5, // Q2 2027 (corrected)
-                duration: 4,
-                status: 'not-started',
-                progress: 0,
-                description: 'Define 3-4 high-impact industry clusters based on current employer base, growth potential, and strategic assets.',
-                deliverables: [
-                    'Cluster definitions and profiles',
-                    'Employer maps and data briefs',
-                    'Key assets (education, infrastructure, supply chains)'
-                ],
-                leads: 'Leslie and economic development team with SCSU, chambers, and industry reps',
-                metrics: [
-                    'Cluster briefs published and used → At least 1 brief per priority cluster annually',
-                    'Partners adopting shared cluster language → +10% annually over 2026 baseline',
-                    'Integration of clusters in workforce & BRE initiatives → +10% annually over 2026 baseline'
-                ]
-            },
-            {
-                id: 'sa2-sector-roundtables',
-                name: 'Sector-Specific BRE Roundtables',
-                category: 'addition-2',
-                categoryLabel: 'Addition 2: Industry Clusters',
-                startQuarter: 4, // Q1 2027 (corrected)
-                duration: 12,
-                status: 'not-started',
-                progress: 0,
-                description: 'Launch ongoing roundtables for top clusters (e.g., manufacturing, logistics, health care) to identify shared needs and policy issues.',
-                deliverables: [
-                    'Annual roundtables by cluster',
-                    'Annual cluster issue briefs',
-                    'Cross-sector working groups for priority solutions'
-                ],
-                leads: 'GSDC economic development team + local chambers, city staff, and SCSU research partners',
-                metrics: [
-                    'Roundtable attendance & retention → +10% annually over 2026 baseline',
-                    'Shared needs documented → Written summary from each roundtable',
-                    'Cluster-driven initiatives launched → +10% annually over 2026 baseline'
-                ]
-            },
-            {
-                id: 'sa2-talent-pipelines',
-                name: 'Targeted Talent Pipeline Partnerships',
-                category: 'addition-2',
-                categoryLabel: 'Addition 2: Industry Clusters',
-                startQuarter: 0, // Q1 2026
-                duration: 16,
-                status: 'not-started',
-                progress: 0,
-                description: 'Coordinate with workforce boards, K-12 systems, and postsecondary partners to align training, recruitment, and exposure efforts with top clusters.',
-                deliverables: [
-                    'Cluster-specific career exposure events',
-                    'Internship and apprenticeship pilots',
-                    'Employer-led curriculum guidance'
-                ],
-                leads: 'GSDC with workforce development boards, school districts, and postsecondary partners',
-                metrics: [
-                    'Students reached through exposure efforts → +10% annually over 2026 baseline',
-                    'Programs aligned to cluster hiring needs → +10% annually over 2026 baseline',
-                    'Employer satisfaction & engagement → Maintain ≥ 4.5/5 satisfaction rating'
-                ]
-            },
-
-            // Strategic Addition 3: Federal Funding Strategy & Coordination
-            {
-                id: 'sa3-grant-calendar',
-                name: 'Federal Grant Calendar & Watchlist',
-                category: 'addition-3',
-                categoryLabel: 'Addition 3: Federal Funding',
-                startQuarter: 0, // Q1 2026
-                duration: 16,
-                status: 'in-progress',
-                progress: 30,
-                description: 'Maintain a central, live-updated calendar and database of upcoming federal/state grant opportunities with deadlines, partners, and alignment notes.',
-                deliverables: [
-                    'Quarterly or semi-annual updates with new opportunities',
-                    'Filters by topic (infrastructure, workforce, broadband)',
-                    'Color-coded readiness and fit ratings'
-                ],
-                leads: 'GSDC staff + partner staff (Initiative Foundation EDD staff)',
-                metrics: [
-                    'Watchlist usage stats → +10% annually over 2026 baseline',
-                    'Joint applications informed by tool → +10% annually over 2026 baseline',
-                    'Partner satisfaction with information access → ≥ 4.5/5 average score'
-                ]
-            },
-            {
-                id: 'sa3-technical-assistance',
-                name: 'Pre-Development Technical Assistance',
-                category: 'addition-3',
-                categoryLabel: 'Addition 3: Federal Funding',
-                startQuarter: 2, // Q3 2026
-                duration: 12,
-                status: 'not-started',
-                progress: 0,
-                description: 'Create a pooled resource of technical assistance hours or funding to help regional partners prepare shovel-worthy projects before grants are announced.',
-                deliverables: [
-                    'Flexible fund or shared consultant pool',
-                    'Priority to projects listed in GSDC\'s Investment Playbook',
-                    'Includes business attraction and industrial site infrastructure projects'
-                ],
-                leads: 'GSDC, city/county public works and economic development teams, Initiative Foundation',
-                metrics: [
-                    'Projects supported pre-grant → +10% annually over 2026 baseline',
-                    'Funding unlocked via assistance → +10% annually over 2026 baseline',
-                    'Use of pool by multiple jurisdictions → +10% annually over 2026 baseline'
-                ]
-            },
-            {
-                id: 'sa3-grant-council',
-                name: 'Grant Alignment Council',
-                category: 'addition-3',
-                categoryLabel: 'Addition 3: Federal Funding',
-                startQuarter: 3, // Q4 2026
-                duration: 12,
-                status: 'not-started',
-                progress: 0,
-                description: 'Establish a standing coordination group of regional grant writers, project leads, and agency partners to align applications, avoid duplication, and share knowledge.',
-                deliverables: [
-                    'Quarterly coordination calls as grants become available',
-                    'Shared grant "intel" archive and best practice exchange',
-                    'Annual grant win/loss debrief'
-                ],
-                leads: 'GSDC, Initiative Foundation, city/county grant staff, regional agencies',
-                metrics: [
-                    'Grants submitted jointly or with partner input → +10% annually over 2026 baseline',
-                    'Cross-agency participation rates → +10% annually over 2026 baseline',
-                    'Win rate for coordinated applications → +10% annually over 2026 baseline'
-                ]
-            },
-
-            // Strategic Addition 4: Housing & Land Use for Regional Growth
-            {
-                id: 'sa4-housing-map',
-                name: 'Housing & Land Readiness Map',
-                category: 'addition-4',
-                categoryLabel: 'Addition 4: Housing & Land',
-                startQuarter: 8, // Q1 2028 prototype (corrected)
-                duration: 8,
-                status: 'not-started',
-                progress: 0,
-                description: 'Create a shared inventory of developable land, housing pipeline projects, and zoning designations tied to regional economic needs.',
-                deliverables: [
-                    'Land & Housing Readiness Map Tool (interactive)',
-                    'Crosswalk of land use/zoning with economic development priority sites',
-                    'Regional Development Dashboard'
-                ],
-                leads: 'GSDC strategic ops team, city/county planners, housing agencies',
-                metrics: [
-                    '% of jurisdictions contributing data → +10% annually over 2026 baseline',
-                    'Number of sites prepared for development → +10% annually over 2026 baseline',
-                    'Housing units & commercial projects tracked → +10% annually over baseline'
-                ]
-            },
-            {
-                id: 'sa4-alignment-cohort',
-                name: 'Housing & Infrastructure Alignment Cohort',
-                category: 'addition-4',
-                categoryLabel: 'Addition 4: Housing & Land',
-                startQuarter: 4, // Q1 2027 (corrected)
-                duration: 16,
-                status: 'not-started',
-                progress: 0,
-                description: 'Convene quarterly working group of planners, EDAs, developers, Chambers of Commerce and utilities to proactively align infrastructure planning with land/housing priorities.',
-                deliverables: [
-                    'Shared planning calendar and review protocols',
-                    'Toolkit for integrating housing and utility planning',
-                    'Issue briefs on infrastructure gaps by corridor or site type'
-                ],
-                leads: 'GSDC policy and strategy leads, utility partners, Initiative Foundation',
-                metrics: [
-                    'Infrastructure plans coordinated with housing strategy → +10% annually over 2026 baseline',
-                    'Reduction in development delays linked to utility misalignment → -10% annually',
-                    'Policy changes advanced through cohort recommendations → +10% annually over 2026 baseline'
-                ]
-            },
-            {
-                id: 'sa4-impact-stories',
-                name: 'Housing Opportunity Impact Stories',
-                category: 'addition-4',
-                categoryLabel: 'Addition 4: Housing & Land',
-                startQuarter: 2, // Q3 2026
-                duration: 12,
-                status: 'not-started',
-                progress: 0,
-                description: 'Package and share data-driven stories showing how housing access supports business growth, community resilience, and inclusive regional development.',
-                deliverables: [
-                    'Quarterly "Impact Story" briefs with employer and resident perspectives',
-                    'Regional housing demand & pressure dashboard',
-                    'Amplification via forums, investor briefings, legislative packets'
-                ],
-                leads: 'GSDC comms team, partner housing orgs, data partners',
-                metrics: [
-                    'Media and stakeholder reach of stories → +10% annually over 2026 baseline',
-                    'Use of stories in grant apps and legislative advocacy → tracked annually',
-                    'Qualitative feedback on message clarity → ≥ 4.5/5 rating'
-                ]
-            },
-
-            // Strategic Addition 5: Talent Return & Regional Engagement
-            {
-                id: 'sa5-boomerang-campaign',
-                name: 'Boomerang Talent Campaign',
-                category: 'addition-5',
-                categoryLabel: 'Addition 5: Talent Return',
-                startQuarter: 1, // Q2 2026
-                duration: 14,
-                status: 'not-started',
-                progress: 0,
-                description: 'Launch a regional campaign to attract back former residents—including alumni, young professionals, and remote workers—with job, housing, and lifestyle messaging.',
-                deliverables: [
-                    '"Come Back to Greater St. Cloud" digital campaign',
-                    'Alumni and ex-resident database from high schools, colleges, employers, and community orgs',
-                    'Social media and relocation toolkit for partners'
-                ],
-                leads: 'Gail, Tammy, GSDC Comms and Talent teams, college alumni offices, chambers, CVB',
-                metrics: [
-                    'Website traffic & social engagement → +10% annually over 2026 baseline',
-                    'Alumni & ex-resident database growth → +10% annually over 2026 baseline',
-                    'Inquiries & relocations tracked via partner orgs → +10% annually over 2026 baseline',
-                    'Hours spent with returnees/boomerangers/new residents → +10% annually over 2026 baseline'
-                ]
-            },
-            {
-                id: 'sa5-internship-connector',
-                name: 'Regional Internship & First Career Connector',
-                category: 'addition-5',
-                categoryLabel: 'Addition 5: Talent Return',
-                startQuarter: 2, // Q3 2026
-                duration: 12,
-                status: 'not-started',
-                progress: 0,
-                description: 'Curate opportunities for students and recent grads to access internships, apprenticeships, and early-career opportunities in high-need sectors.',
-                deliverables: [
-                    'Regional internship/early-career job board',
-                    'Internship Playbook for employers',
-                    'Equity-focused outreach through school and nonprofit partners'
-                ],
-                leads: 'GSDC, HR councils, SCSU and SCTCC career centers, United Way, school districts',
-                metrics: [
-                    'Internships posted & filled → +10% annually over 2026 baseline',
-                    'Employers using the Career Connector system → +10% annually over 2026 baseline',
-                    'Retention of participants in region after program → +10% annually over 2026 baseline'
-                ]
-            },
-            {
-                id: 'sa5-civic-pathways',
-                name: 'Civic Engagement Pathways',
-                category: 'addition-5',
-                categoryLabel: 'Addition 5: Talent Return',
-                startQuarter: 8, // Q1 2028 (corrected)
-                duration: 12,
-                status: 'not-started',
-                progress: 0,
-                description: 'Partner with civic orgs, boards, and community initiatives to create clearer ways for young professionals to engage in public life.',
-                deliverables: [
-                    'Young Leaders Civic Pathway Map',
-                    'Board Match events and board readiness workshops',
-                    'Partnerships with service orgs, city boards, and nonprofits'
-                ],
-                leads: 'GSDC Talent and Leadership teams, Rotary/YP groups, public sector partners',
-                metrics: [
-                    'Participants matched to civic boards/programs → +10% annually over 2026 baseline',
-                    'Repeat civic engagement rates → +10% annually over 2026 baseline',
-                    'Satisfaction with leadership experiences → Maintain ≥ 4.5/5 survey rating'
-                ]
-            }
-        ];
-
-        // GitHub configuration - CONFIGURED FOR YOUR REPOSITORY
-        let githubConfig = {
+        // GitHub configuration
+        const githubConfig = {
             owner: '1979wdr',
             repo: 'evident',
             token: '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',
@@ -1166,10 +397,56 @@
             branch: 'main'
         };
 
+        // Sample timeline data
+        let timelineData = [
+            {
+                id: 'p1-messaging',
+                name: 'Regional Messaging Toolkit',
+                category: 'pillar-1',
+                categoryLabel: 'Pillar 1: Unified Leadership',
+                startQuarter: 2,
+                duration: 2,
+                status: 'not-started',
+                progress: 0,
+                description: 'Develop a shared set of key messages, visuals, and data points to align how partners communicate the region\'s identity and priorities.',
+                deliverables: [
+                    '5-Point Regional Message Card',
+                    'Co-branded visuals and language assets'
+                ],
+                leads: 'Tammy and Jennie (GSDC), comms staff, Marketing Committee',
+                metrics: [
+                    'Distribution reach: 100% of partners by Q3 2026',
+                    'Usage rate: 75% partners actively using within 12 months'
+                ]
+            },
+            {
+                id: 'p2-startup-journey',
+                name: 'Startup Journey Map & Mentorship',
+                category: 'pillar-2',
+                categoryLabel: 'Pillar 2: Business Support',
+                startQuarter: 0,
+                duration: 6,
+                status: 'in-progress',
+                progress: 25,
+                description: 'Clarify the "idea-to-exit" business growth path and launch a structured mentorship network.',
+                deliverables: [
+                    'Regional Startup Journey Map',
+                    'Founder Mentorship Exchange'
+                ],
+                leads: 'Leslie and Jennie (GSDC), Initiative Foundation, SBDC',
+                metrics: [
+                    '1 ecosystem map created and published',
+                    'Startups supported → +10-15% increase over 2026 baseline'
+                ]
+            }
+        ];
+
+        let filteredData = [];
         let currentEditingId = null;
 
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
+            filteredData = [...timelineData];
             renderInitiatives();
         });
 
@@ -1177,19 +454,17 @@
             const container = document.getElementById('initiativesList');
             const searchTerm = document.getElementById('searchInput').value.toLowerCase();
             const categoryFilter = document.getElementById('categoryFilter').value;
-            const statusFilter = document.getElementById('statusFilter').value;
             
-            const filteredData = timelineData.filter(item => {
+            filteredData = timelineData.filter(item => {
                 const matchesSearch = item.name.toLowerCase().includes(searchTerm) || 
                                     item.description.toLowerCase().includes(searchTerm);
                 const matchesCategory = !categoryFilter || item.category === categoryFilter;
-                const matchesStatus = !statusFilter || item.status === statusFilter;
                 
-                return matchesSearch && matchesCategory && matchesStatus;
+                return matchesSearch && matchesCategory;
             });
             
             container.innerHTML = filteredData.map(item => `
-                <div class="initiative-card ${item.category}">
+                <div class="initiative-card">
                     <div class="initiative-header">
                         <div>
                             <div class="initiative-title">${item.name}</div>
@@ -1197,7 +472,6 @@
                         </div>
                         <div class="initiative-actions">
                             <button class="btn btn-primary" onclick="editInitiative('${item.id}')">Edit</button>
-                            <button class="btn btn-danger" onclick="confirmDeleteInitiative('${item.id}')">Delete</button>
                         </div>
                     </div>
                     <div class="initiative-meta">
@@ -1206,7 +480,7 @@
                         <span>Duration: ${item.duration} quarters</span>
                     </div>
                     <div class="progress-bar">
-                        <div class="progress-fill" style="width: ${item.progress}%"></div>
+                        <div class="progress-fill" style="width: ${item.progress}%;"></div>
                     </div>
                     <p>${item.description}</p>
                 </div>
@@ -1220,13 +494,7 @@
         function addInitiative() {
             currentEditingId = null;
             document.getElementById('modalTitle').textContent = 'Add New Initiative';
-            document.getElementById('deleteBtn').style.display = 'none';
-            
-            // Reset form
             document.getElementById('editForm').reset();
-            document.getElementById('deliverablesList').innerHTML = '';
-            document.getElementById('metricsList').innerHTML = '';
-            
             document.getElementById('editModal').style.display = 'block';
         }
 
@@ -1236,9 +504,7 @@
             
             currentEditingId = id;
             document.getElementById('modalTitle').textContent = 'Edit Initiative';
-            document.getElementById('deleteBtn').style.display = 'inline-block';
             
-            // Populate form
             document.getElementById('editName').value = initiative.name;
             document.getElementById('editCategory').value = initiative.category;
             document.getElementById('editDescription').value = initiative.description;
@@ -1248,68 +514,7 @@
             document.getElementById('editProgress').value = initiative.progress;
             document.getElementById('editLeads').value = initiative.leads;
             
-            // Populate deliverables
-            renderListItems('deliverablesList', initiative.deliverables, 'removeDeliverable');
-            
-            // Populate metrics (read-only)
-            renderListItems('metricsList', initiative.metrics);
-            
             document.getElementById('editModal').style.display = 'block';
-        }
-
-        function renderListItems(containerId, items, removeFunction) {
-            const container = document.getElementById(containerId);
-            if (containerId === 'metricsList') {
-                // Metrics are read-only
-                container.innerHTML = items.map(item => `
-                    <div class="list-item">
-                        <span class="list-item-text">${item}</span>
-                    </div>
-                `).join('');
-            } else {
-                // Deliverables can be edited
-                container.innerHTML = items.map((item, index) => `
-                    <div class="list-item">
-                        <span class="list-item-text">${item}</span>
-                        <div class="list-item-actions">
-                            <button onclick="${removeFunction}(${index})">Remove</button>
-                        </div>
-                    </div>
-                `).join('');
-            }
-        }
-
-        function addDeliverable() {
-            const input = document.getElementById('newDeliverable');
-            const value = input.value.trim();
-            if (!value) return;
-            
-            if (!currentEditingId) {
-                // New initiative - store in temp array
-                if (!window.tempDeliverables) window.tempDeliverables = [];
-                window.tempDeliverables.push(value);
-                renderListItems('deliverablesList', window.tempDeliverables, 'removeDeliverable');
-            } else {
-                // Existing initiative
-                const initiative = timelineData.find(item => item.id === currentEditingId);
-                initiative.deliverables.push(value);
-                renderListItems('deliverablesList', initiative.deliverables, 'removeDeliverable');
-            }
-            
-            input.value = '';
-        }
-
-        function removeDeliverable(index) {
-            if (!currentEditingId) {
-                if (window.tempDeliverables) {
-                    window.tempDeliverables.splice(index, 1);
-                    renderListItems('deliverablesList', window.tempDeliverables, 'removeDeliverable');
-                }
-            } else {
-                const initiative = timelineData.find(item => item.id === currentEditingId);
-                initiative.deliverables.splice(index, 1);
-                renderListItems('deliverablesList', initiative.deliverables, 'removeDeliverable');
-            }
         }
 
         function saveInitiative() {
@@ -1319,73 +524,40 @@
                 return;
             }
             
+            const categoryLabels = {
+                'pillar-1': 'Pillar 1: Unified Leadership',
+                'pillar-2': 'Pillar 2: Business Support',
+                'pillar-3': 'Pillar 3: Amplifying Return'
+            };
+            
             const formData = {
                 name: document.getElementById('editName').value,
                 category: document.getElementById('editCategory').value,
+                categoryLabel: categoryLabels[document.getElementById('editCategory').value],
                 description: document.getElementById('editDescription').value,
                 startQuarter: parseInt(document.getElementById('editStartQuarter').value),
                 duration: parseInt(document.getElementById('editDuration').value),
                 status: document.getElementById('editStatus').value,
                 progress: parseInt(document.getElementById('editProgress').value),
-                leads: document.getElementById('editLeads').value
+                leads: document.getElementById('editLeads').value,
+                deliverables: ['Sample deliverable'],
+                metrics: ['Sample metric']
             };
-            
-            // Get category label
-            const categoryLabels = {
-                'pillar-1': 'Pillar 1: Unified Leadership',
-                'pillar-2': 'Pillar 2: Business Support',
-                'pillar-3': 'Pillar 3: Amplifying Return',
-                'addition-1': 'Addition 1: Civic Infrastructure',
-                'addition-2': 'Addition 2: Industry Clusters',
-                'addition-3': 'Addition 3: Federal Funding',
-                'addition-4': 'Addition 4: Housing & Land',
-                'addition-5': 'Addition 5: Talent Return'
-            };
-            
-            formData.categoryLabel = categoryLabels[formData.category];
             
             if (currentEditingId) {
-                // Edit existing
                 const initiative = timelineData.find(item => item.id === currentEditingId);
                 Object.assign(initiative, formData);
             } else {
-                // Add new
                 const newId = 'custom-' + Date.now();
                 const newInitiative = {
                     id: newId,
-                    ...formData,
-                    deliverables: window.tempDeliverables || [],
-                    metrics: [] // New initiatives start with empty metrics
+                    ...formData
                 };
                 timelineData.push(newInitiative);
-                
-                // Clear temp arrays
-                window.tempDeliverables = [];
             }
             
             closeModal();
             renderInitiatives();
-        }
-
-        function deleteInitiative() {
-            if (!currentEditingId) return;
-            
-            const index = timelineData.findIndex(item => item.id === currentEditingId);
-            if (index > -1) {
-                timelineData.splice(index, 1);
-                closeModal();
-                renderInitiatives();
-            }
-        }
-
-        function confirmDeleteInitiative(id) {
-            if (confirm('Are you sure you want to delete this initiative?')) {
-                const index = timelineData.findIndex(item => item.id === id);
-                if (index > -1) {
-                    timelineData.splice(index, 1);
-                    renderInitiatives();
-                }
-            }
         }
 
         function closeModal() {
@@ -1394,13 +566,7 @@
         }
 
         async function saveChanges() {
-            if (!githubConfig.owner || !githubConfig.repo || !githubConfig.token) {
-                alert('GitHub credentials not configured. Please update the hardcoded values in the code.');
-                return;
-            }
-            
             try {
-                // Get current file SHA (required for updating)
                 let sha = null;
                 try {
                     const getResponse = await fetch(
@@ -1418,10 +584,9 @@
                         sha = fileData.sha;
                     }
                 } catch (e) {
-                    // File doesn't exist yet, that's OK
+                    // File doesn't exist yet
                 }
                 
-                // Prepare the data
                 const jsonData = JSON.stringify(timelineData, null, 2);
                 const content = btoa(unescape(encodeURIComponent(jsonData)));
                 
@@ -1435,7 +600,6 @@
                     requestBody.sha = sha;
                 }
                 
-                // Update the file
                 const response = await fetch(
                     `https://api.github.com/repos/${githubConfig.owner}/${githubConfig.repo}/contents/${githubConfig.fileName}`,
                     {
@@ -1462,11 +626,6 @@
         }
 
         async function loadFromGitHub() {
-            if (!githubConfig.owner || !githubConfig.repo || !githubConfig.token) {
-                alert('GitHub credentials not configured. Please update the hardcoded values in the code.');
-                return;
-            }
-            
             try {
                 const response = await fetch(
                     `https://api.github.com/repos/${githubConfig.owner}/${githubConfig.repo}/contents/${githubConfig.fileName}`,
@@ -1485,7 +644,7 @@
                     renderInitiatives();
                     alert('Timeline data loaded from GitHub successfully!');
                 } else if (response.status === 404) {
-                    alert('Timeline data file not found in repository. Save once to create it.');
+                    alert('Timeline data file not found. Save once to create it.');
                 } else {
                     throw new Error(`HTTP ${response.status}: ${response.statusText}`);
                 }
