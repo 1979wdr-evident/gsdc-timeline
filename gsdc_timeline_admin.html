@@ -433,24 +433,7 @@
     </header>
 
     <div class="container">
-        <!-- GitHub Settings -->
-        <div class="settings-section">
-            <h2 class="settings-title">GitHub Integration</h2>
-            <div class="controls-row">
-                <div class="form-group" style="flex: 1; margin: 0;">
-                    <label>Repository (username/repo-name):</label>
-                    <input type="text" id="githubRepo" placeholder="your-username/gsdc-timeline" value="">
-                </div>
-                <div class="form-group" style="flex: 1; margin: 0;">
-                    <label>Personal Access Token:</label>
-                    <input type="password" id="githubToken" placeholder="ghp_xxxxxxxxxxxx">
-                </div>
-            </div>
-            <div class="controls-row">
-                <button class="btn btn-primary" onclick="testConnection()">Test Connection</button>
-                <span id="connectionStatus" class="status-badge disconnected">Not Connected</span>
-            </div>
-        </div>
+        <!-- GitHub settings section removed - credentials now hardcoded -->
 
         <!-- Controls -->
         <div class="controls">
@@ -832,15 +815,353 @@
                 ]
             }
 
-            // Note: Strategic Additions 1-5 would continue here with corrected timelines
-            // Adding a few key ones for demonstration
+            // Strategic Addition 1: Civic Infrastructure & Leadership Continuity
+            {
+                id: 'sa1-transition-playbook',
+                name: 'Civic Transition Playbook',
+                category: 'addition-1',
+                categoryLabel: 'Addition 1: Civic Infrastructure',
+                startQuarter: 0, // Q1 2026
+                duration: 16,
+                status: 'not-started',
+                progress: 0,
+                description: 'A region-branded onboarding guide for new public leaders—delivered within 60 days of election or appointment.',
+                deliverables: [
+                    'GSDC\'s mission and current regional plan',
+                    'Partner map and contact matrix',
+                    'Regional talking points and infrastructure priorities'
+                ],
+                leads: 'GSDC staff and board with input from city/county leadership',
+                metrics: [
+                    '% of new leaders onboarded within 60 days → +10% annually over 2026 baseline (target ≥ 80% by 2029)',
+                    'Awareness & satisfaction scores → Maintain or improve by +10% annually over 2026 baseline',
+                    'Continuity of initiatives across transitions → +10% annually over 2026 baseline'
+                ]
+            },
+            {
+                id: 'sa1-leadership-dashboard',
+                name: 'Leadership Alignment Dashboard',
+                category: 'addition-1',
+                categoryLabel: 'Addition 1: Civic Infrastructure',
+                startQuarter: 2, // Q3 2026
+                duration: 12,
+                status: 'not-started',
+                progress: 0,
+                description: 'An internal tool to map public and institutional leaders, monitor transitions, and track alignment opportunities.',
+                deliverables: [
+                    'Leader directory with term dates and affiliations',
+                    'Committee and task force participation',
+                    'Status indicators for regional initiative alignment'
+                ],
+                leads: 'Strategic operations staff with civic partnerships oversight',
+                metrics: [
+                    'Contact & role data accuracy → +10% annually over 2026 baseline',
+                    'Participation in cross-sector efforts → +10% annually over 2026 baseline',
+                    'New collaborations or initiatives launched → +10% annually over 2026 baseline'
+                ]
+            },
+            {
+                id: 'sa1-policy-briefings',
+                name: 'Policy Pulse Briefings',
+                category: 'addition-1',
+                categoryLabel: 'Addition 1: Civic Infrastructure',
+                startQuarter: 1, // Q2 2026
+                duration: 14,
+                status: 'not-started',
+                progress: 0,
+                description: 'Annual nonpartisan briefings for civic leaders—focused on high-priority regional topics, timelines, and coordination points.',
+                deliverables: [
+                    '45-minute sessions (virtual or in-person)',
+                    'Top 3 regional priorities per session',
+                    'Pre-brief packet + post-brief call-to-action'
+                ],
+                leads: 'GSDC with planning/policy partners (e.g., DEED, Initiative Foundation)',
+                metrics: [
+                    'Attendance & repeat participation → +10% annually over 2026 baseline',
+                    'Knowledge retention & feedback → +10% annually over 2026 baseline',
+                    'Follow-up actions initiated → +10% annually over 2026 baseline'
+                ]
+            },
+
+            // Strategic Addition 2: Industry Specialization & Cluster Strategy
+            {
+                id: 'sa2-cluster-framework',
+                name: 'Regional Cluster Identity Framework',
+                category: 'addition-2',
+                categoryLabel: 'Addition 2: Industry Clusters',
+                startQuarter: 5, // Q2 2027 (corrected)
+                duration: 4,
+                status: 'not-started',
+                progress: 0,
+                description: 'Define 3-4 high-impact industry clusters based on current employer base, growth potential, and strategic assets.',
+                deliverables: [
+                    'Cluster definitions and profiles',
+                    'Employer maps and data briefs',
+                    'Key assets (education, infrastructure, supply chains)'
+                ],
+                leads: 'Leslie and economic development team with SCSU, chambers, and industry reps',
+                metrics: [
+                    'Cluster briefs published and used → At least 1 brief per priority cluster annually',
+                    'Partners adopting shared cluster language → +10% annually over 2026 baseline',
+                    'Integration of clusters in workforce & BRE initiatives → +10% annually over 2026 baseline'
+                ]
+            },
+            {
+                id: 'sa2-sector-roundtables',
+                name: 'Sector-Specific BRE Roundtables',
+                category: 'addition-2',
+                categoryLabel: 'Addition 2: Industry Clusters',
+                startQuarter: 4, // Q1 2027 (corrected)
+                duration: 12,
+                status: 'not-started',
+                progress: 0,
+                description: 'Launch ongoing roundtables for top clusters (e.g., manufacturing, logistics, health care) to identify shared needs and policy issues.',
+                deliverables: [
+                    'Annual roundtables by cluster',
+                    'Annual cluster issue briefs',
+                    'Cross-sector working groups for priority solutions'
+                ],
+                leads: 'GSDC economic development team + local chambers, city staff, and SCSU research partners',
+                metrics: [
+                    'Roundtable attendance & retention → +10% annually over 2026 baseline',
+                    'Shared needs documented → Written summary from each roundtable',
+                    'Cluster-driven initiatives launched → +10% annually over 2026 baseline'
+                ]
+            },
+            {
+                id: 'sa2-talent-pipelines',
+                name: 'Targeted Talent Pipeline Partnerships',
+                category: 'addition-2',
+                categoryLabel: 'Addition 2: Industry Clusters',
+                startQuarter: 0, // Q1 2026
+                duration: 16,
+                status: 'not-started',
+                progress: 0,
+                description: 'Coordinate with workforce boards, K-12 systems, and postsecondary partners to align training, recruitment, and exposure efforts with top clusters.',
+                deliverables: [
+                    'Cluster-specific career exposure events',
+                    'Internship and apprenticeship pilots',
+                    'Employer-led curriculum guidance'
+                ],
+                leads: 'GSDC with workforce development boards, school districts, and postsecondary partners',
+                metrics: [
+                    'Students reached through exposure efforts → +10% annually over 2026 baseline',
+                    'Programs aligned to cluster hiring needs → +10% annually over 2026 baseline',
+                    'Employer satisfaction & engagement → Maintain ≥ 4.5/5 satisfaction rating'
+                ]
+            },
+
+            // Strategic Addition 3: Federal Funding Strategy & Coordination
+            {
+                id: 'sa3-grant-calendar',
+                name: 'Federal Grant Calendar & Watchlist',
+                category: 'addition-3',
+                categoryLabel: 'Addition 3: Federal Funding',
+                startQuarter: 0, // Q1 2026
+                duration: 16,
+                status: 'in-progress',
+                progress: 30,
+                description: 'Maintain a central, live-updated calendar and database of upcoming federal/state grant opportunities with deadlines, partners, and alignment notes.',
+                deliverables: [
+                    'Quarterly or semi-annual updates with new opportunities',
+                    'Filters by topic (infrastructure, workforce, broadband)',
+                    'Color-coded readiness and fit ratings'
+                ],
+                leads: 'GSDC staff + partner staff (Initiative Foundation EDD staff)',
+                metrics: [
+                    'Watchlist usage stats → +10% annually over 2026 baseline',
+                    'Joint applications informed by tool → +10% annually over 2026 baseline',
+                    'Partner satisfaction with information access → ≥ 4.5/5 average score'
+                ]
+            },
+            {
+                id: 'sa3-technical-assistance',
+                name: 'Pre-Development Technical Assistance',
+                category: 'addition-3',
+                categoryLabel: 'Addition 3: Federal Funding',
+                startQuarter: 2, // Q3 2026
+                duration: 12,
+                status: 'not-started',
+                progress: 0,
+                description: 'Create a pooled resource of technical assistance hours or funding to help regional partners prepare shovel-worthy projects before grants are announced.',
+                deliverables: [
+                    'Flexible fund or shared consultant pool',
+                    'Priority to projects listed in GSDC\'s Investment Playbook',
+                    'Includes business attraction and industrial site infrastructure projects'
+                ],
+                leads: 'GSDC, city/county public works and economic development teams, Initiative Foundation',
+                metrics: [
+                    'Projects supported pre-grant → +10% annually over 2026 baseline',
+                    'Funding unlocked via assistance → +10% annually over 2026 baseline',
+                    'Use of pool by multiple jurisdictions → +10% annually over 2026 baseline'
+                ]
+            },
+            {
+                id: 'sa3-grant-council',
+                name: 'Grant Alignment Council',
+                category: 'addition-3',
+                categoryLabel: 'Addition 3: Federal Funding',
+                startQuarter: 3, // Q4 2026
+                duration: 12,
+                status: 'not-started',
+                progress: 0,
+                description: 'Establish a standing coordination group of regional grant writers, project leads, and agency partners to align applications, avoid duplication, and share knowledge.',
+                deliverables: [
+                    'Quarterly coordination calls as grants become available',
+                    'Shared grant "intel" archive and best practice exchange',
+                    'Annual grant win/loss debrief'
+                ],
+                leads: 'GSDC, Initiative Foundation, city/county grant staff, regional agencies',
+                metrics: [
+                    'Grants submitted jointly or with partner input → +10% annually over 2026 baseline',
+                    'Cross-agency participation rates → +10% annually over 2026 baseline',
+                    'Win rate for coordinated applications → +10% annually over 2026 baseline'
+                ]
+            },
+
+            // Strategic Addition 4: Housing & Land Use for Regional Growth
+            {
+                id: 'sa4-housing-map',
+                name: 'Housing & Land Readiness Map',
+                category: 'addition-4',
+                categoryLabel: 'Addition 4: Housing & Land',
+                startQuarter: 8, // Q1 2028 prototype (corrected)
+                duration: 8,
+                status: 'not-started',
+                progress: 0,
+                description: 'Create a shared inventory of developable land, housing pipeline projects, and zoning designations tied to regional economic needs.',
+                deliverables: [
+                    'Land & Housing Readiness Map Tool (interactive)',
+                    'Crosswalk of land use/zoning with economic development priority sites',
+                    'Regional Development Dashboard'
+                ],
+                leads: 'GSDC strategic ops team, city/county planners, housing agencies',
+                metrics: [
+                    '% of jurisdictions contributing data → +10% annually over 2026 baseline',
+                    'Number of sites prepared for development → +10% annually over 2026 baseline',
+                    'Housing units & commercial projects tracked → +10% annually over baseline'
+                ]
+            },
+            {
+                id: 'sa4-alignment-cohort',
+                name: 'Housing & Infrastructure Alignment Cohort',
+                category: 'addition-4',
+                categoryLabel: 'Addition 4: Housing & Land',
+                startQuarter: 4, // Q1 2027 (corrected)
+                duration: 16,
+                status: 'not-started',
+                progress: 0,
+                description: 'Convene quarterly working group of planners, EDAs, developers, Chambers of Commerce and utilities to proactively align infrastructure planning with land/housing priorities.',
+                deliverables: [
+                    'Shared planning calendar and review protocols',
+                    'Toolkit for integrating housing and utility planning',
+                    'Issue briefs on infrastructure gaps by corridor or site type'
+                ],
+                leads: 'GSDC policy and strategy leads, utility partners, Initiative Foundation',
+                metrics: [
+                    'Infrastructure plans coordinated with housing strategy → +10% annually over 2026 baseline',
+                    'Reduction in development delays linked to utility misalignment → -10% annually',
+                    'Policy changes advanced through cohort recommendations → +10% annually over 2026 baseline'
+                ]
+            },
+            {
+                id: 'sa4-impact-stories',
+                name: 'Housing Opportunity Impact Stories',
+                category: 'addition-4',
+                categoryLabel: 'Addition 4: Housing & Land',
+                startQuarter: 2, // Q3 2026
+                duration: 12,
+                status: 'not-started',
+                progress: 0,
+                description: 'Package and share data-driven stories showing how housing access supports business growth, community resilience, and inclusive regional development.',
+                deliverables: [
+                    'Quarterly "Impact Story" briefs with employer and resident perspectives',
+                    'Regional housing demand & pressure dashboard',
+                    'Amplification via forums, investor briefings, legislative packets'
+                ],
+                leads: 'GSDC comms team, partner housing orgs, data partners',
+                metrics: [
+                    'Media and stakeholder reach of stories → +10% annually over 2026 baseline',
+                    'Use of stories in grant apps and legislative advocacy → tracked annually',
+                    'Qualitative feedback on message clarity → ≥ 4.5/5 rating'
+                ]
+            },
+
+            // Strategic Addition 5: Talent Return & Regional Engagement
+            {
+                id: 'sa5-boomerang-campaign',
+                name: 'Boomerang Talent Campaign',
+                category: 'addition-5',
+                categoryLabel: 'Addition 5: Talent Return',
+                startQuarter: 1, // Q2 2026
+                duration: 14,
+                status: 'not-started',
+                progress: 0,
+                description: 'Launch a regional campaign to attract back former residents—including alumni, young professionals, and remote workers—with job, housing, and lifestyle messaging.',
+                deliverables: [
+                    '"Come Back to Greater St. Cloud" digital campaign',
+                    'Alumni and ex-resident database from high schools, colleges, employers, and community orgs',
+                    'Social media and relocation toolkit for partners'
+                ],
+                leads: 'Gail, Tammy, GSDC Comms and Talent teams, college alumni offices, chambers, CVB',
+                metrics: [
+                    'Website traffic & social engagement → +10% annually over 2026 baseline',
+                    'Alumni & ex-resident database growth → +10% annually over 2026 baseline',
+                    'Inquiries & relocations tracked via partner orgs → +10% annually over 2026 baseline',
+                    'Hours spent with returnees/boomerangers/new residents → +10% annually over 2026 baseline'
+                ]
+            },
+            {
+                id: 'sa5-internship-connector',
+                name: 'Regional Internship & First Career Connector',
+                category: 'addition-5',
+                categoryLabel: 'Addition 5: Talent Return',
+                startQuarter: 2, // Q3 2026
+                duration: 12,
+                status: 'not-started',
+                progress: 0,
+                description: 'Curate opportunities for students and recent grads to access internships, apprenticeships, and early-career opportunities in high-need sectors.',
+                deliverables: [
+                    'Regional internship/early-career job board',
+                    'Internship Playbook for employers',
+                    'Equity-focused outreach through school and nonprofit partners'
+                ],
+                leads: 'GSDC, HR councils, SCSU and SCTCC career centers, United Way, school districts',
+                metrics: [
+                    'Internships posted & filled → +10% annually over 2026 baseline',
+                    'Employers using the Career Connector system → +10% annually over 2026 baseline',
+                    'Retention of participants in region after program → +10% annually over 2026 baseline'
+                ]
+            },
+            {
+                id: 'sa5-civic-pathways',
+                name: 'Civic Engagement Pathways',
+                category: 'addition-5',
+                categoryLabel: 'Addition 5: Talent Return',
+                startQuarter: 8, // Q1 2028 (corrected)
+                duration: 12,
+                status: 'not-started',
+                progress: 0,
+                description: 'Partner with civic orgs, boards, and community initiatives to create clearer ways for young professionals to engage in public life.',
+                deliverables: [
+                    'Young Leaders Civic Pathway Map',
+                    'Board Match events and board readiness workshops',
+                    'Partnerships with service orgs, city boards, and nonprofits'
+                ],
+                leads: 'GSDC Talent and Leadership teams, Rotary/YP groups, public sector partners',
+                metrics: [
+                    'Participants matched to civic boards/programs → +10% annually over 2026 baseline',
+                    'Repeat civic engagement rates → +10% annually over 2026 baseline',
+                    'Satisfaction with leadership experiences → Maintain ≥ 4.5/5 survey rating'
+                ]
+            }
         ];
 
-        // GitHub configuration
+        // GitHub configuration - CONFIGURED FOR YOUR REPOSITORY
         let githubConfig = {
-            owner: '',
-            repo: '',
-            token: '',
+            owner: '1979wdr',
+            repo: 'evident',
+            token: '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',
             fileName: 'timeline-data.json',
             branch: 'main'
         };
@@ -849,64 +1170,8 @@
 
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
-            loadSettings();
             renderInitiatives();
         });
-
-        function loadSettings() {
-            const savedRepo = localStorage.getItem('githubRepo');
-            const savedToken = localStorage.getItem('githubToken');
-            
-            if (savedRepo) document.getElementById('githubRepo').value = savedRepo;
-            if (savedToken) document.getElementById('githubToken').value = savedToken;
-            
-            updateGithubConfig();
-        }
-
-        function updateGithubConfig() {
-            const repo = document.getElementById('githubRepo').value;
-            const token = document.getElementById('githubToken').value;
-            
-            if (repo.includes('/')) {
-                const [owner, repoName] = repo.split('/');
-                githubConfig.owner = owner;
-                githubConfig.repo = repoName;
-                githubConfig.token = token;
-                
-                // Save to localStorage
-                localStorage.setItem('githubRepo', repo);
-                localStorage.setItem('githubToken', token);
-            }
-        }
-
-        async function testConnection() {
-            updateGithubConfig();
-            
-            if (!githubConfig.owner || !githubConfig.repo || !githubConfig.token) {
-                alert('Please fill in both repository and token fields');
-                return;
-            }
-            
-            try {
-                const response = await fetch(`https://api.github.com/repos/${githubConfig.owner}/${githubConfig.repo}`, {
-                    headers: {
-                        'Authorization': `token ${githubConfig.token}`,
-                        'Accept': 'application/vnd.github.v3+json'
-                    }
-                });
-                
-                if (response.ok) {
-                    document.getElementById('connectionStatus').textContent = 'Connected';
-                    document.getElementById('connectionStatus').className = 'status-badge connected';
-                } else {
-                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-                }
-            } catch (error) {
-                document.getElementById('connectionStatus').textContent = 'Connection Failed';
-                document.getElementById('connectionStatus').className = 'status-badge disconnected';
-                alert(`Connection failed: ${error.message}`);
-            }
-        }
 
         function renderInitiatives() {
             const container = document.getElementById('initiativesList');
@@ -1129,10 +1394,8 @@
         }
 
         async function saveChanges() {
-            updateGithubConfig();
-            
             if (!githubConfig.owner || !githubConfig.repo || !githubConfig.token) {
-                alert('Please configure GitHub settings first');
+                alert('GitHub credentials not configured. Please update the hardcoded values in the code.');
                 return;
             }
             
@@ -1199,10 +1462,8 @@
         }
 
         async function loadFromGitHub() {
-            updateGithubConfig();
-            
             if (!githubConfig.owner || !githubConfig.repo || !githubConfig.token) {
-                alert('Please configure GitHub settings first');
+                alert('GitHub credentials not configured. Please update the hardcoded values in the code.');
                 return;
             }
             
