@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSDC Timeline Admin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gsdc-blue: #2C5AA0;
+            --gsdc-orange: #FF6B35;
+            --gsdc-light-blue: #E8F1FF;
+            --gsdc-dark-blue: #1A4180;
+            --success: #22C55E;
+            --warning: #F59E0B;
+            --danger: #EF4444;
+            --border: #E5E7EB;
+            --bg-light: #F8F9FA;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-light);
+            color: #333;
+        }
+
+        .header {
+            background: white;
+            padding: 1rem 2rem;
+            border-bottom: 3px solid var(--gsdc-blue);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            color: var(--gsdc-blue);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            color: #666;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .controls {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .controls-row {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .controls-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--gsdc-blue);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--gsdc-dark-blue);
+            transform: translateY(-1px);
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #16A34A;
+            transform: translateY(-1px);
+        }
+
+        .btn-warning {
+            background: var(--warning);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #6B7280;
+            color: white;
+        }
+
+        .btn-danger {
+            background: var(--danger);
+            color: white;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 0.75rem;
+            border: 2px solid var(--border);
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--gsdc-blue);
+        }
+
+        .initiatives-grid {
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .initiative-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--gsdc-blue);
+        }
+
+        .initiative-card.pillar-1 { border-left-color: var(--gsdc-blue); }
+        .initiative-card.pillar-2 { border-left-color: var(--gsdc-orange); }
+        .initiative-card.pillar-3 { border-left-color: var(--gsdc-dark-blue); }
+        .initiative-card.addition-1 { border-left-color: #8B5CF6; }
+        .initiative-card.addition-2 { border-left-color: #06B6D4; }
+        .initiative-card.addition-3 { border-left-color: #10B981; }
+        .initiative-card.addition-4 { border-left-color: #F59E0B; }
+        .initiative-card.addition-5 { border-left-color: #EF4444; }
+
+        .initiative-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .initiative-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--gsdc-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .initiative-category {
+            background: var(--gsdc-light-blue);
+            color: var(--gsdc-blue);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .initiative-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .status-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        .status-not-started { background: #9CA3AF; }
+        .status-in-progress { background: var(--warning); }
+        .status-completed { background: var(--success); }
+        .status-delayed { background: var(--danger); }
+
+        .initiative-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .initiative-actions .btn {
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 2% auto;
+            padding: 0;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            background: var(--gsdc-blue);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h3 {
+            margin: 0;
+            font-size: 1.3rem;
+        }
+
+        .close {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            opacity: 0.8;
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--gsdc-blue);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--border);
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gsdc-blue);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-actions {
+            border-top: 1px solid var(--border);
+            padding: 1.5rem 2rem;
+            background: var(--bg-light);
+            border-radius: 0 0 8px 8px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+        }
+
+        .progress-bar {
+            background: var(--border);
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 0.5rem;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--success);
+            transition: width 0.3s ease;
+        }
+
+        .list-items {
+            margin-bottom: 1rem;
+        }
+
+        .list-item {
+            background: var(--bg-light);
+            padding: 0.75rem;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .list-item-text {
+            flex: 1;
+        }
+
+        .list-item-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .list-item-actions button {
+            padding: 0.25rem 0.5rem;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .add-item-form {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .add-item-input {
+            flex: 1;
+            padding: 0.5rem;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+        }
+
+        .settings-section {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .settings-title {
+            color: var(--gsdc-blue);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .status-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .status-badge.connected {
+            background: var(--success);
+        }
+
+        .status-badge.disconnected {
+            background: var(--danger);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .controls-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .initiative-header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .initiative-actions {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>GSDC Timeline Admin</h1>
+        <p>Manage Strategic Plan Implementation Timeline</p>
+    </header>
+
+    <div class="container">
+        <!-- GitHub Settings -->
+        <div class="settings-section">
+            <h2 class="settings-title">GitHub Integration</h2>
+            <div class="controls-row">
+                <div class="form-group" style="flex: 1; margin: 0;">
+                    <label>Repository (username/repo-name):</label>
+                    <input type="text" id="githubRepo" placeholder="your-username/gsdc-timeline" value="">
+                </div>
+                <div class="form-group" style="flex: 1; margin: 0;">
+                    <label>Personal Access Token:</label>
+                    <input type="password" id="githubToken" placeholder="ghp_xxxxxxxxxxxx">
+                </div>
+            </div>
+            <div class="controls-row">
+                <button class="btn btn-primary" onclick="testConnection()">Test Connection</button>
+                <span id="connectionStatus" class="status-badge disconnected">Not Connected</span>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <div class="controls-row">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search initiatives..." onkeyup="filterInitiatives()">
+                <select id="categoryFilter" onchange="filterInitiatives()">
+                    <option value="">All Categories</option>
+                    <option value="pillar-1">Pillar 1: Unified Leadership</option>
+                    <option value="pillar-2">Pillar 2: Business Support</option>
+                    <option value="pillar-3">Pillar 3: Amplifying Return</option>
+                    <option value="addition-1">Addition 1: Civic Infrastructure</option>
+                    <option value="addition-2">Addition 2: Industry Clusters</option>
+                    <option value="addition-3">Addition 3: Federal Funding</option>
+                    <option value="addition-4">Addition 4: Housing & Land</option>
+                    <option value="addition-5">Addition 5: Talent Return</option>
+                </select>
+                <select id="statusFilter" onchange="filterInitiatives()">
+                    <option value="">All Statuses</option>
+                    <option value="not-started">Not Started</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                    <option value="delayed">Delayed</option>
+                </select>
+            </div>
+            <div class="controls-row">
+                <button class="btn btn-primary" onclick="addInitiative()">+ Add Initiative</button>
+                <button class="btn btn-success" onclick="saveChanges()">💾 Save to GitHub</button>
+                <button class="btn btn-warning" onclick="loadFromGitHub()">🔄 Load from GitHub</button>
+                <a href="gsdc_timeline_display.html" class="btn btn-secondary" target="_blank">👁️ View Timeline</a>
+            </div>
+        </div>
+
+        <!-- Initiatives List -->
+        <div id="initiativesList" class="initiatives-grid">
+            <!-- Populated by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Edit Initiative Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Edit Initiative</h3>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="editForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="editName">Initiative Name</label>
+                            <input type="text" id="editName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editCategory">Category</label>
+                            <select id="editCategory" required>
+                                <option value="pillar-1">Pillar 1: Unified Leadership</option>
+                                <option value="pillar-2">Pillar 2: Business Support</option>
+                                <option value="pillar-3">Pillar 3: Amplifying Return</option>
+                                <option value="addition-1">Addition 1: Civic Infrastructure</option>
+                                <option value="addition-2">Addition 2: Industry Clusters</option>
+                                <option value="addition-3">Addition 3: Federal Funding</option>
+                                <option value="addition-4">Addition 4: Housing & Land</option>
+                                <option value="addition-5">Addition 5: Talent Return</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editDescription">Description</label>
+                        <textarea id="editDescription" required></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="editStartQuarter">Start Quarter (0-15, where 0=Q1 2026)</label>
+                            <input type="number" id="editStartQuarter" min="0" max="15" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editDuration">Duration (quarters)</label>
+                            <input type="number" id="editDuration" min="1" max="16" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="editStatus">Status</label>
+                            <select id="editStatus" required>
+                                <option value="not-started">Not Started</option>
+                                <option value="in-progress">In Progress</option>
+                                <option value="completed">Completed</option>
+                                <option value="delayed">Delayed</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="editProgress">Progress (%)</label>
+                            <input type="number" id="editProgress" min="0" max="100" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editLeads">Project Leads</label>
+                        <input type="text" id="editLeads" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Deliverables</label>
+                        <div id="deliverablesList" class="list-items"></div>
+                        <div class="add-item-form">
+                            <input type="text" id="newDeliverable" class="add-item-input" placeholder="Add new deliverable...">
+                            <button type="button" class="btn btn-primary" onclick="addDeliverable()">Add</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Success Metrics (Read-only)</label>
+                        <div id="metricsList" class="list-items"></div>
+                        <p style="color: #666; font-size: 0.9rem; font-style: italic; margin-top: 0.5rem;">
+                            Metrics are defined in the strategic plan and cannot be edited here.
+                        </p>
+                    </div>
+                </form>
+            </div>
+            <div class="form-actions">
+                <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+                <button type="button" class="btn btn-danger" onclick="deleteInitiative()" id="deleteBtn">Delete</button>
+                <button type="button" class="btn btn-success" onclick="saveInitiative()">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Timeline data - corrected from strategic plan
+        let timelineData = [
+            {
+                id: 'p1-messaging',
+                name: 'Regional Messaging Toolkit',
+                category: 'pillar-1',
+                categoryLabel: 'Pillar 1: Unified Leadership',
+                startQuarter: 2, // Q3 2026 (corrected)
+                duration: 2,
+                status: 'not-started',
+                progress: 0,
+                description: 'Develop a shared set of key messages, visuals, and data points to align how partners communicate the region\'s identity and priorities.',
+                deliverables: [
+                    '"5-Point Regional Message Card"',
+                    'Co-branded visuals and language assets',
+                    'Customizable messaging for talent, infrastructure, business climate',
+                    'Distribution to elected officials, business leaders, schools, chambers'
+                ],
+                leads: 'Tammy and Jennie (GSDC), comms staff, Marketing Committee, CVB, partner Chambers, city managers',
+                metrics: [
+                    'Distribution reach: 100% of partners by Q3 2026',
+                    'Usage rate: 75% partners actively using within 12 months',
+                    'Social engagement: 20% increase across partner channels',
+                    'Downloads: 250+ in Year 1'
+                ]
+            },
+            {
+                id: 'p1-roundtables',
+                name: 'Infrastructure & Policy Roundtables',
+                category: 'pillar-1',
+                categoryLabel: 'Pillar 1: Unified Leadership',
+                startQuarter: 2, // Q3 2026 launch (corrected)
+                duration: 14,
+                status: 'not-started',
+                progress: 0,
+                description: 'Host annual roundtables with city, county, school, and economic development leaders to coordinate capital planning, permitting, and legislative strategy.',
+                deliverables: [
+                    'Project pipeline by stage',
+                    'Funding applications in progress',
+                    'Shared permitting/zoning priorities',
+                    'Policy alignment opportunities'
+                ],
+                leads: 'NeTia and Leslie (GSDC), city and county staff, Dan Weber (Initiative Foundation), BEP, public works directors',
+                metrics: [
+                    '≥ 90% of invited stakeholders attend annually',
+                    '3 collaborative funding applications influenced each year',
+                    '1-2 regionally aligned bonding/policy requests per legislative session'
+                ]
+            },
+            {
+                id: 'p1-onboarding',
+                name: 'Civic Onboarding Protocol',
+                category: 'pillar-1',
+                categoryLabel: 'Pillar 1: Unified Leadership',
+                startQuarter: 0, // Q1 2026
+                duration: 16,
+                status: 'not-started',
+                progress: 0,
+                description: 'Develop and deliver a regional onboarding experience for new elected officials, public-sector staff, and institutional leaders.',
+                deliverables: [
+                    'Regional Onboarding Packet with key partners and priorities',
+                    'GSDC Welcome Letter from Board Chair',
+                    '1:1 strategic briefings with NeTia or staff designee'
+                ],
+                leads: 'Tammy (design), NeTia (outreach), Board Chair and volunteers',
+                metrics: [
+                    '100% packet delivery',
+                    '≥ 80% 1:1 completion rate',
+                    '≥ 50% of new leaders participate in at least one GSDC event/initiative within 6 months'
+                ]
+            },
+            {
+                id: 'p1-playbook',
+                name: 'Public Investment Playbook',
+                category: 'pillar-1',
+                categoryLabel: 'Pillar 1: Unified Leadership',
+                startQuarter: 2, // Q3 2026
+                duration: 3,
+                status: 'not-started',
+                progress: 0,
+                description: 'A shared reference guide listing top regional infrastructure priorities with project status, costs, and lead agencies—used for strategic fundraising and alignment.',
+                deliverables: [
+                    '5-8 top priority projects (broadband, housing, downtowns, roads)',
+                    'Project status: shovel-ready, permitting, concept',
+                    'Key agency leads and estimated costs'
+                ],
+                leads: 'Leslie and Tammy (GSDC), joint partner task force, city/county staff',
+                metrics: [
+                    '5-8 priority projects included and tracked',
+                    '$5M secured by 2029',
+                    '≥ 50% of projects with cross-jurisdictional support'
+                ]
+            },
+
+            // Pillar 2
+            {
+                id: 'p2-startup-journey',
+                name: 'Startup Journey Map & Mentorship',
+                category: 'pillar-2',
+                categoryLabel: 'Pillar 2: Business Support',
+                startQuarter: 0, // Q1 2026
+                duration: 6,
+                status: 'not-started',
+                progress: 0,
+                description: 'Clarify the "idea-to-exit" business growth path and launch a structured mentorship network to guide founders and early-stage employers.',
+                deliverables: [
+                    'Regional Startup Journey Map (print + interactive)',
+                    'Founder Mentorship Exchange',
+                    '"Investor Access Guide" + annual pitch nights'
+                ],
+                leads: 'Leslie and Jennie (GSDC), Initiative Foundation, SBDC, Great North Labs, private investors',
+                metrics: [
+                    '1 ecosystem map created and published',
+                    '1 investor access guide produced',
+                    'Startups supported → +10-15% increase over 2026 baseline'
+                ]
+            },
+            {
+                id: 'p2-bre-cycles',
+                name: 'Sector-Based BRE Cycles',
+                category: 'pillar-2',
+                categoryLabel: 'Pillar 2: Business Support',
+                startQuarter: 1, // Q2 2026
+                duration: 14,
+                status: 'not-started',
+                progress: 0,
+                description: 'Modernize BRE strategy by organizing outreach by industry cluster and firm size—targeting specific expansion barriers.',
+                deliverables: [
+                    'Targeted BRE visits by sector and firm size',
+                    'Quarterly BRE Briefing Sheets'
+                ],
+                leads: 'GSDC economic development team, city economic partners, SCSU for data analysis',
+                metrics: [
+                    '# of BRE visits: Goal of 100 annually, with 60% in primary sectors',
+                    '% of firms receiving structured follow-up: +10-15% over 2026 baseline',
+                    '# of businesses supported in expansion: +10-15% over 2026 baseline'
+                ]
+            },
+            {
+                id: 'p2-capital-access',
+                name: 'Capital Access Mapping & Coaching',
+                category: 'pillar-2',
+                categoryLabel: 'Pillar 2: Business Support',
+                startQuarter: 1, // Q2 2026
+                duration: 12,
+                status: 'not-started',
+                progress: 0,
+                description: 'Create a centralized capital navigation system for businesses—covering grants, loans, equity, and SSBCI pathways.',
+                deliverables: [
+                    'Regional Capital Landscape Guide',
+                    '1:1 Capital Coaching Sessions',
+                    '"Equity Prep" workshops'
+                ],
+                leads: 'GSDC, SBDC, local banks, capital mapping partners',
+                metrics: [
+                    'Workshops: ≥ 5 annually',
+                    'Businesses receiving support: +10% increase over 2025 baseline',
+                    'Capital raised via GSDC pathways: tracked narratively'
+                ]
+            },
+            {
+                id: 'p2-succession',
+                name: 'Business Succession & Continuity',
+                category: 'pillar-2',
+                categoryLabel: 'Pillar 2: Business Support',
+                startQuarter: 1, // Q2 2026
+                duration: 10,
+                status: 'not-started',
+                progress: 0,
+                description: 'Help owners in transition with tools, financial matchmaking, and successor support—especially in rural and legacy sectors.',
+                deliverables: [
+                    'Succession Toolkit',
+                    'Business-to-Business Acquisition Matchmaking',
+                    'Lender Partnerships'
+                ],
+                leads: 'GSDC, CPAs, estate attorneys, local lenders',
+                metrics: [
+                    'Succession Toolkit Downloads: 60 by 2029',
+                    'Transitions Supported: ≥ 5 demonstration cases',
+                    'Businesses Supported in Continuity: +10% annually over 2026 baseline'
+                ]
+            },
+
+            // Pillar 3
+            {
+                id: 'p3-investor-tiers',
+                name: 'Relaunched Investor Tier Model',
+                category: 'pillar-3',
+                categoryLabel: 'Pillar 3: Amplifying Return',
+                startQuarter: -1, // Q4 2025 (completed)
+                duration: 4,
+                status: 'completed',
+                progress: 100,
+                description: 'Modernize GSDC\'s investor tiers to clearly link financial commitments with visibility, involvement, and regional impact.',
+                deliverables: [
+                    'New tier descriptions w/ benefits, outcomes, and engagement pathways',
+                    'Tier onboarding kits and branded welcome tools'
+                ],
+                leads: 'NeTia (GSDC), SAC team, investor relations volunteers, ops support',
+                metrics: [
+                    'Investor renewals at same or higher tier → +10% over 2026 baseline',
+                    'Average annual investor contribution → +5-10% increase',
+                    'Overall investor retention rate → maintain at ≥ 85%'
+                ]
+            },
+            {
+                id: 'p3-roi-dashboard',
+                name: 'Quarterly ROI Dashboard & Video Briefings',
+                category: 'pillar-3',
+                categoryLabel: 'Pillar 3: Amplifying Return',
+                startQuarter: 0, // Q1 2026
+                duration: 16,
+                status: 'in-progress',
+                progress: 20,
+                description: 'Deliver investor updates through a lightweight, consistent format that\'s visual, digestible, and usable in meetings or pitches.',
+                deliverables: [
+                    '2-page Quarterly Impact Brief',
+                    'Interactive digital dashboard',
+                    '3-minute video updates'
+                ],
+                leads: 'Jennie and Tammy (GSDC), comms team, investor services group',
+                metrics: [
+                    'Open & engagement rates → +10% annually over 2026 baseline',
+                    'Documented usage → +10% annually',
+                    'Quarterly satisfaction rating → Maintain ≥ 4.5/5'
+                ]
+            },
+            {
+                id: 'p3-investor-forums',
+                name: 'Investor Experience Forums & Recognition',
+                category: 'pillar-3',
+                categoryLabel: 'Pillar 3: Amplifying Return',
+                startQuarter: 1, // Q2 2026
+                duration: 14,
+                status: 'not-started',
+                progress: 0,
+                description: 'Host strategic, high-energy convenings that connect investors to outcomes, celebrate impact, and offer networking value.',
+                deliverables: [
+                    '2 thematic forums/year',
+                    'Investor of the Month spotlight & annual recognition awards',
+                    '"Impact in Action" walk-throughs'
+                ],
+                leads: 'Strategic pillar leads, comms + events team, investor ops group',
+                metrics: [
+                    'Forum attendance & cross-sector participation → +10% annually',
+                    'New pledges or upgraded tiers post-forum → +10% annually',
+                    'Media/social reach from recognitions → +10% annually'
+                ]
+            }
+
+            // Note: Strategic Additions 1-5 would continue here with corrected timelines
+            // Adding a few key ones for demonstration
+        ];
+
+        // GitHub configuration
+        let githubConfig = {
+            owner: '',
+            repo: '',
+            token: '',
+            fileName: 'timeline-data.json',
+            branch: 'main'
+        };
+
+        let currentEditingId = null;
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            loadSettings();
+            renderInitiatives();
+        });
+
+        function loadSettings() {
+            const savedRepo = localStorage.getItem('githubRepo');
+            const savedToken = localStorage.getItem('githubToken');
+            
+            if (savedRepo) document.getElementById('githubRepo').value = savedRepo;
+            if (savedToken) document.getElementById('githubToken').value = savedToken;
+            
+            updateGithubConfig();
+        }
+
+        function updateGithubConfig() {
+            const repo = document.getElementById('githubRepo').value;
+            const token = document.getElementById('githubToken').value;
+            
+            if (repo.includes('/')) {
+                const [owner, repoName] = repo.split('/');
+                githubConfig.owner = owner;
+                githubConfig.repo = repoName;
+                githubConfig.token = token;
+                
+                // Save to localStorage
+                localStorage.setItem('githubRepo', repo);
+                localStorage.setItem('githubToken', token);
+            }
+        }
+
+        async function testConnection() {
+            updateGithubConfig();
+            
+            if (!githubConfig.owner || !githubConfig.repo || !githubConfig.token) {
+                alert('Please fill in both repository and token fields');
+                return;
+            }
+            
+            try {
+                const response = await fetch(`https://api.github.com/repos/${githubConfig.owner}/${githubConfig.repo}`, {
+                    headers: {
+                        'Authorization': `token ${githubConfig.token}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+                
+                if (response.ok) {
+                    document.getElementById('connectionStatus').textContent = 'Connected';
+                    document.getElementById('connectionStatus').className = 'status-badge connected';
+                } else {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+            } catch (error) {
+                document.getElementById('connectionStatus').textContent = 'Connection Failed';
+                document.getElementById('connectionStatus').className = 'status-badge disconnected';
+                alert(`Connection failed: ${error.message}`);
+            }
+        }
+
+        function renderInitiatives() {
+            const container = document.getElementById('initiativesList');
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const categoryFilter = document.getElementById('categoryFilter').value;
+            const statusFilter = document.getElementById('statusFilter').value;
+            
+            const filteredData = timelineData.filter(item => {
+                const matchesSearch = item.name.toLowerCase().includes(searchTerm) || 
+                                    item.description.toLowerCase().includes(searchTerm);
+                const matchesCategory = !categoryFilter || item.category === categoryFilter;
+                const matchesStatus = !statusFilter || item.status === statusFilter;
+                
+                return matchesSearch && matchesCategory && matchesStatus;
+            });
+            
+            container.innerHTML = filteredData.map(item => `
+                <div class="initiative-card ${item.category}">
+                    <div class="initiative-header">
+                        <div>
+                            <div class="initiative-title">${item.name}</div>
+                            <div class="initiative-category">${item.categoryLabel}</div>
+                        </div>
+                        <div class="initiative-actions">
+                            <button class="btn btn-primary" onclick="editInitiative('${item.id}')">Edit</button>
+                            <button class="btn btn-danger" onclick="confirmDeleteInitiative('${item.id}')">Delete</button>
+                        </div>
+                    </div>
+                    <div class="initiative-meta">
+                        <span><span class="status-indicator status-${item.status}"></span>${item.status.replace('-', ' ').toUpperCase()}</span>
+                        <span>Progress: ${item.progress}%</span>
+                        <span>Duration: ${item.duration} quarters</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: ${item.progress}%"></div>
+                    </div>
+                    <p>${item.description}</p>
+                </div>
+            `).join('');
+        }
+
+        function filterInitiatives() {
+            renderInitiatives();
+        }
+
+        function addInitiative() {
+            currentEditingId = null;
+            document.getElementById('modalTitle').textContent = 'Add New Initiative';
+            document.getElementById('deleteBtn').style.display = 'none';
+            
+            // Reset form
+            document.getElementById('editForm').reset();
+            document.getElementById('deliverablesList').innerHTML = '';
+            document.getElementById('metricsList').innerHTML = '';
+            
+            document.getElementById('editModal').style.display = 'block';
+        }
+
+        function editInitiative(id) {
+            const initiative = timelineData.find(item => item.id === id);
+            if (!initiative) return;
+            
+            currentEditingId = id;
+            document.getElementById('modalTitle').textContent = 'Edit Initiative';
+            document.getElementById('deleteBtn').style.display = 'inline-block';
+            
+            // Populate form
+            document.getElementById('editName').value = initiative.name;
+            document.getElementById('editCategory').value = initiative.category;
+            document.getElementById('editDescription').value = initiative.description;
+            document.getElementById('editStartQuarter').value = initiative.startQuarter;
+            document.getElementById('editDuration').value = initiative.duration;
+            document.getElementById('editStatus').value = initiative.status;
+            document.getElementById('editProgress').value = initiative.progress;
+            document.getElementById('editLeads').value = initiative.leads;
+            
+            // Populate deliverables
+            renderListItems('deliverablesList', initiative.deliverables, 'removeDeliverable');
+            
+            // Populate metrics (read-only)
+            renderListItems('metricsList', initiative.metrics);
+            
+            document.getElementById('editModal').style.display = 'block';
+        }
+
+        function renderListItems(containerId, items, removeFunction) {
+            const container = document.getElementById(containerId);
+            if (containerId === 'metricsList') {
+                // Metrics are read-only
+                container.innerHTML = items.map(item => `
+                    <div class="list-item">
+                        <span class="list-item-text">${item}</span>
+                    </div>
+                `).join('');
+            } else {
+                // Deliverables can be edited
+                container.innerHTML = items.map((item, index) => `
+                    <div class="list-item">
+                        <span class="list-item-text">${item}</span>
+                        <div class="list-item-actions">
+                            <button onclick="${removeFunction}(${index})">Remove</button>
+                        </div>
+                    </div>
+                `).join('');
+            }
+        }
+
+        function addDeliverable() {
+            const input = document.getElementById('newDeliverable');
+            const value = input.value.trim();
+            if (!value) return;
+            
+            if (!currentEditingId) {
+                // New initiative - store in temp array
+                if (!window.tempDeliverables) window.tempDeliverables = [];
+                window.tempDeliverables.push(value);
+                renderListItems('deliverablesList', window.tempDeliverables, 'removeDeliverable');
+            } else {
+                // Existing initiative
+                const initiative = timelineData.find(item => item.id === currentEditingId);
+                initiative.deliverables.push(value);
+                renderListItems('deliverablesList', initiative.deliverables, 'removeDeliverable');
+            }
+            
+            input.value = '';
+        }
+
+        function removeDeliverable(index) {
+            if (!currentEditingId) {
+                if (window.tempDeliverables) {
+                    window.tempDeliverables.splice(index, 1);
+                    renderListItems('deliverablesList', window.tempDeliverables, 'removeDeliverable');
+                }
+            } else {
+                const initiative = timelineData.find(item => item.id === currentEditingId);
+                initiative.deliverables.splice(index, 1);
+                renderListItems('deliverablesList', initiative.deliverables, 'removeDeliverable');
+            }
+        }
+
+        function saveInitiative() {
+            const form = document.getElementById('editForm');
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+            
+            const formData = {
+                name: document.getElementById('editName').value,
+                category: document.getElementById('editCategory').value,
+                description: document.getElementById('editDescription').value,
+                startQuarter: parseInt(document.getElementById('editStartQuarter').value),
+                duration: parseInt(document.getElementById('editDuration').value),
+                status: document.getElementById('editStatus').value,
+                progress: parseInt(document.getElementById('editProgress').value),
+                leads: document.getElementById('editLeads').value
+            };
+            
+            // Get category label
+            const categoryLabels = {
+                'pillar-1': 'Pillar 1: Unified Leadership',
+                'pillar-2': 'Pillar 2: Business Support',
+                'pillar-3': 'Pillar 3: Amplifying Return',
+                'addition-1': 'Addition 1: Civic Infrastructure',
+                'addition-2': 'Addition 2: Industry Clusters',
+                'addition-3': 'Addition 3: Federal Funding',
+                'addition-4': 'Addition 4: Housing & Land',
+                'addition-5': 'Addition 5: Talent Return'
+            };
+            
+            formData.categoryLabel = categoryLabels[formData.category];
+            
+            if (currentEditingId) {
+                // Edit existing
+                const initiative = timelineData.find(item => item.id === currentEditingId);
+                Object.assign(initiative, formData);
+            } else {
+                // Add new
+                const newId = 'custom-' + Date.now();
+                const newInitiative = {
+                    id: newId,
+                    ...formData,
+                    deliverables: window.tempDeliverables || [],
+                    metrics: [] // New initiatives start with empty metrics
+                };
+                timelineData.push(newInitiative);
+                
+                // Clear temp arrays
+                window.tempDeliverables = [];
+            }
+            
+            closeModal();
+            renderInitiatives();
+        }
+
+        function deleteInitiative() {
+            if (!currentEditingId) return;
+            
+            const index = timelineData.findIndex(item => item.id === currentEditingId);
+            if (index > -1) {
+                timelineData.splice(index, 1);
+                closeModal();
+                renderInitiatives();
+            }
+        }
+
+        function confirmDeleteInitiative(id) {
+            if (confirm('Are you sure you want to delete this initiative?')) {
+                const index = timelineData.findIndex(item => item.id === id);
+                if (index > -1) {
+                    timelineData.splice(index, 1);
+                    renderInitiatives();
+                }
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('editModal').style.display = 'none';
+            currentEditingId = null;
+        }
+
+        async function saveChanges() {
+            updateGithubConfig();
+            
+            if (!githubConfig.owner || !githubConfig.repo || !githubConfig.token) {
+                alert('Please configure GitHub settings first');
+                return;
+            }
+            
+            try {
+                // Get current file SHA (required for updating)
+                let sha = null;
+                try {
+                    const getResponse = await fetch(
+                        `https://api.github.com/repos/${githubConfig.owner}/${githubConfig.repo}/contents/${githubConfig.fileName}`,
+                        {
+                            headers: {
+                                'Authorization': `token ${githubConfig.token}`,
+                                'Accept': 'application/vnd.github.v3+json'
+                            }
+                        }
+                    );
+                    
+                    if (getResponse.ok) {
+                        const fileData = await getResponse.json();
+                        sha = fileData.sha;
+                    }
+                } catch (e) {
+                    // File doesn't exist yet, that's OK
+                }
+                
+                // Prepare the data
+                const jsonData = JSON.stringify(timelineData, null, 2);
+                const content = btoa(unescape(encodeURIComponent(jsonData)));
+                
+                const requestBody = {
+                    message: `Update timeline data - ${new Date().toISOString()}`,
+                    content: content,
+                    branch: githubConfig.branch
+                };
+                
+                if (sha) {
+                    requestBody.sha = sha;
+                }
+                
+                // Update the file
+                const response = await fetch(
+                    `https://api.github.com/repos/${githubConfig.owner}/${githubConfig.repo}/contents/${githubConfig.fileName}`,
+                    {
+                        method: 'PUT',
+                        headers: {
+                            'Authorization': `token ${githubConfig.token}`,
+                            'Accept': 'application/vnd.github.v3+json',
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(requestBody)
+                    }
+                );
+                
+                if (response.ok) {
+                    alert('Timeline data saved to GitHub successfully!');
+                } else {
+                    const errorData = await response.json();
+                    throw new Error(`HTTP ${response.status}: ${errorData.message}`);
+                }
+            } catch (error) {
+                alert(`Failed to save to GitHub: ${error.message}`);
+                console.error('Save error:', error);
+            }
+        }
+
+        async function loadFromGitHub() {
+            updateGithubConfig();
+            
+            if (!githubConfig.owner || !githubConfig.repo || !githubConfig.token) {
+                alert('Please configure GitHub settings first');
+                return;
+            }
+            
+            try {
+                const response = await fetch(
+                    `https://api.github.com/repos/${githubConfig.owner}/${githubConfig.repo}/contents/${githubConfig.fileName}`,
+                    {
+                        headers: {
+                            'Authorization': `token ${githubConfig.token}`,
+                            'Accept': 'application/vnd.github.v3+json'
+                        }
+                    }
+                );
+                
+                if (response.ok) {
+                    const fileData = await response.json();
+                    const content = atob(fileData.content);
+                    timelineData = JSON.parse(content);
+                    renderInitiatives();
+                    alert('Timeline data loaded from GitHub successfully!');
+                } else if (response.status === 404) {
+                    alert('Timeline data file not found in repository. Save once to create it.');
+                } else {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+            } catch (error) {
+                alert(`Failed to load from GitHub: ${error.message}`);
+                console.error('Load error:', error);
+            }
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('editModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
