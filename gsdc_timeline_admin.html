@@ -342,16 +342,20 @@
             
             // First get the current file to get the SHA
             fetch(url, {
+                method: 'GET',
                 headers: {
-                    'Authorization': 'token ' + githubToken,
+                    'Authorization': 'Bearer ' + githubToken,
                     'Accept': 'application/vnd.github.v3+json'
                 }
             })
             .then(function(response) {
                 if (response.ok) {
                     return response.json();
-                } else {
+                } else if (response.status === 404) {
+                    // File doesn't exist yet, that's OK
                     return null;
+                } else {
+                    throw new Error('HTTP ' + response.status + ': ' + response.statusText);
                 }
             })
             .then(function(fileData) {
@@ -372,7 +376,7 @@
                 return fetch(url, {
                     method: 'PUT',
                     headers: {
-                        'Authorization': 'token ' + githubToken,
+                        'Authorization': 'Bearer ' + githubToken,
                         'Accept': 'application/vnd.github.v3+json',
                         'Content-Type': 'application/json'
                     },
@@ -383,11 +387,14 @@
                 if (response.ok) {
                     alert('Timeline data saved to GitHub successfully!');
                 } else {
-                    alert('Failed to save to GitHub');
+                    return response.text().then(function(text) {
+                        throw new Error('HTTP ' + response.status + ': ' + text);
+                    });
                 }
             })
             .catch(function(error) {
                 alert('Error saving to GitHub: ' + error.message);
+                console.error('Full error:', error);
             });
         }
 
@@ -396,7 +403,7 @@
             
             fetch(url, {
                 headers: {
-                    'Authorization': 'token ' + githubToken,
+                    'Authorization': 'Bearer ' + githubToken,
                     'Accept': 'application/vnd.github.v3+json'
                 }
             })
@@ -404,7 +411,7 @@
                 if (response.ok) {
                     return response.json();
                 } else {
-                    throw new Error('File not found');
+                    throw new Error('HTTP ' + response.status + ': ' + response.statusText);
                 }
             })
             .then(function(fileData) {
@@ -415,6 +422,7 @@
             })
             .catch(function(error) {
                 alert('Error loading from GitHub: ' + error.message);
+                console.error('Full error:', error);
             });
         }
 
