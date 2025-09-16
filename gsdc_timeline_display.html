@@ -120,23 +120,6 @@
             min-width: 200px;
         }
 
-        .filter-tag {
-            background: var(--gsdc-orange);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .filter-tag .remove {
-            cursor: pointer;
-            font-weight: bold;
-        }
-
         .export-btn, .admin-btn {
             background: var(--gsdc-orange);
             color: white;
@@ -149,17 +132,12 @@
             text-decoration: none;
         }
 
-        .export-btn:hover, .admin-btn:hover {
-            background: #E55A2B;
-            transform: translateY(-1px);
-        }
-
         .admin-btn {
             background: var(--gsdc-blue);
         }
 
-        .admin-btn:hover {
-            background: var(--gsdc-dark-blue);
+        .admin-btn:hover, .export-btn:hover {
+            transform: translateY(-1px);
         }
 
         .main-content {
@@ -211,7 +189,7 @@
             margin-bottom: 2rem;
         }
 
-        /* Gantt View Styles */
+        /* Gantt View */
         .gantt-view {
             display: none;
         }
@@ -249,12 +227,7 @@
             background: var(--border-light);
             margin-bottom: 1px;
             min-height: 60px;
-            opacity: 0;
-            animation: fadeInUp 0.6s ease forwards;
         }
-
-        .gantt-row:nth-child(odd) { animation-delay: 0.1s; }
-        .gantt-row:nth-child(even) { animation-delay: 0.05s; }
 
         .task-info {
             background: white;
@@ -268,7 +241,6 @@
 
         .task-info:hover {
             background: var(--gsdc-light-blue);
-            transform: translateX(2px);
         }
 
         .status-indicator {
@@ -314,11 +286,6 @@
             color: white;
             box-shadow: 0 2px 4px rgba(0,0,0,0.2);
             cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .gantt-bar:hover {
-            transform: translateY(-50%) scale(1.05);
         }
 
         .pillar-1 { background: var(--gsdc-blue); }
@@ -330,148 +297,7 @@
         .addition-4 { background: #F59E0B; }
         .addition-5 { background: #EF4444; }
 
-        /* Milestone View Styles */
-        .milestone-view {
-            display: none;
-        }
-
-        .milestone-view.active {
-            display: block;
-        }
-
-        .milestone-year {
-            margin-bottom: 3rem;
-        }
-
-        .year-header {
-            background: var(--gsdc-blue);
-            color: white;
-            padding: 1rem 2rem;
-            margin-bottom: 2rem;
-            border-radius: 8px;
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .quarters-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .quarter-card {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            overflow: hidden;
-            border-top: 4px solid var(--gsdc-orange);
-        }
-
-        .quarter-header {
-            background: var(--gsdc-light-blue);
-            padding: 1rem;
-            font-weight: 600;
-            color: var(--gsdc-blue);
-            font-size: 1.1rem;
-        }
-
-        .quarter-items {
-            padding: 1rem;
-        }
-
-        .milestone-item {
-            padding: 0.75rem;
-            margin-bottom: 0.5rem;
-            background: var(--bg-light);
-            border-radius: 5px;
-            border-left: 4px solid var(--gsdc-blue);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            opacity: 0;
-            animation: fadeInUp 0.6s ease forwards;
-        }
-
-        .milestone-item:nth-child(odd) { animation-delay: 0.1s; }
-        .milestone-item:nth-child(even) { animation-delay: 0.2s; }
-
-        .milestone-item:hover {
-            transform: translateX(5px);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .milestone-item.pillar-1 { border-left-color: var(--gsdc-blue); }
-        .milestone-item.pillar-2 { border-left-color: var(--gsdc-orange); }
-        .milestone-item.pillar-3 { border-left-color: var(--gsdc-dark-blue); }
-        .milestone-item.addition-1 { border-left-color: #8B5CF6; }
-        .milestone-item.addition-2 { border-left-color: #06B6D4; }
-        .milestone-item.addition-3 { border-left-color: #10B981; }
-        .milestone-item.addition-4 { border-left-color: #F59E0B; }
-        .milestone-item.addition-5 { border-left-color: #EF4444; }
-
-        .milestone-title {
-            font-weight: 600;
-            margin-bottom: 0.3rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .milestone-category {
-            font-size: 0.8rem;
-            color: var(--text-light);
-        }
-
-        /* Calendar View Styles */
-        .calendar-view {
-            display: none;
-        }
-
-        .calendar-view.active {
-            display: block;
-        }
-
-        .calendar-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .calendar-quarter {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-
-        .calendar-quarter-header {
-            background: var(--gsdc-blue);
-            color: white;
-            padding: 1rem;
-            text-align: center;
-            font-weight: 600;
-        }
-
-        .calendar-quarter-content {
-            padding: 1rem;
-            min-height: 200px;
-        }
-
-        .calendar-item {
-            padding: 0.5rem;
-            margin-bottom: 0.5rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .calendar-item:hover {
-            transform: scale(1.02);
-        }
-
-        /* Task Detail Modal */
+        /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -481,7 +307,6 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0,0,0,0.5);
-            animation: fadeIn 0.3s ease;
         }
 
         .modal-content {
@@ -494,7 +319,6 @@
             max-height: 80vh;
             overflow-y: auto;
             box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-            animation: slideIn 0.3s ease;
         }
 
         .modal-header {
@@ -517,7 +341,6 @@
             font-size: 2rem;
             font-weight: bold;
             cursor: pointer;
-            line-height: 1;
         }
 
         .close:hover {
@@ -559,14 +382,6 @@
             height: 100%;
             background: var(--success);
             transition: width 0.8s ease;
-            border-radius: 10px;
-        }
-
-        .tags {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            margin-top: 1rem;
         }
 
         .tag {
@@ -582,59 +397,11 @@
             display: none !important;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideIn {
-            from { 
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to { 
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2rem;
-            }
-            
-            .controls-container {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            
             .gantt-header, .gantt-row {
                 grid-template-columns: 200px repeat(16, 1fr);
             }
             
-            .calendar-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .quarters-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .container {
-                padding: 0 1rem;
-            }
-
             .timeline-stats {
                 flex-direction: column;
                 gap: 0.5rem;
@@ -681,13 +448,11 @@
                     </select>
                     
                     <input type="text" class="search-input" id="searchInput" placeholder="Search initiatives..." onkeyup="applyFilters()">
-                    
-                    <div id="activeFilters" class="active-filters"></div>
                 </div>
                 
                 <div style="display: flex; gap: 1rem;">
                     <a href="gsdc_timeline_admin.html" class="admin-btn">⚙️ Admin</a>
-                    <button class="export-btn" onclick="exportTimeline()">📄 Export Timeline</button>
+                    <button class="export-btn" onclick="exportTimeline()">📄 Export</button>
                 </div>
             </div>
         </div>
@@ -706,78 +471,38 @@
                 </div>
                 
                 <div class="timeline-content">
-                    <div id="loadingIndicator" class="loading">
-                        Loading timeline data...
-                    </div>
+                    <div id="loadingIndicator" class="loading">Loading timeline data...</div>
                     
                     <div id="errorMessage" class="error hidden">
-                        <strong>Note:</strong> Timeline is displaying sample data. To load your full data:
-                        <ul style="margin: 0.5rem 0 0 1.5rem;">
-                            <li>Use the admin interface to configure GitHub integration, or</li>
-                            <li>Place a "timeline-data.json" file in the same directory as this page</li>
-                        </ul>
+                        <strong>Note:</strong> Using sample data. Configure GitHub in admin interface for full data.
                     </div>
                     
-                    <!-- Gantt View -->
                     <div id="ganttView" class="gantt-view active hidden">
                         <div class="gantt-header">
                             <div class="task-header">Initiative</div>
-                            <div>Q1 2026</div>
-                            <div>Q2 2026</div>
-                            <div>Q3 2026</div>
-                            <div>Q4 2026</div>
-                            <div>Q1 2027</div>
-                            <div>Q2 2027</div>
-                            <div>Q3 2027</div>
-                            <div>Q4 2027</div>
-                            <div>Q1 2028</div>
-                            <div>Q2 2028</div>
-                            <div>Q3 2028</div>
-                            <div>Q4 2028</div>
-                            <div>Q1 2029</div>
-                            <div>Q2 2029</div>
-                            <div>Q3 2029</div>
-                            <div>Q4 2029</div>
+                            <div>Q1 2026</div><div>Q2 2026</div><div>Q3 2026</div><div>Q4 2026</div>
+                            <div>Q1 2027</div><div>Q2 2027</div><div>Q3 2027</div><div>Q4 2027</div>
+                            <div>Q1 2028</div><div>Q2 2028</div><div>Q3 2028</div><div>Q4 2028</div>
+                            <div>Q1 2029</div><div>Q2 2029</div><div>Q3 2029</div><div>Q4 2029</div>
                         </div>
                         <div id="ganttRows"></div>
-                    </div>
-                    
-                    <!-- Milestone View -->
-                    <div id="milestoneView" class="milestone-view hidden">
-                        <div id="milestoneContent"></div>
-                    </div>
-                    
-                    <!-- Calendar View -->
-                    <div id="calendarView" class="calendar-view hidden">
-                        <div id="calendarContent"></div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Task Detail Modal -->
     <div id="taskModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
                 <h3 id="modalTitle">Task Details</h3>
                 <span class="close" onclick="closeModal()">&times;</span>
             </div>
-            <div class="modal-body" id="modalBody">
-                <!-- Content populated by JavaScript -->
-            </div>
+            <div class="modal-body" id="modalBody"></div>
         </div>
     </div>
 
     <script>
-        // Configuration
-        const CONFIG = {
-            githubDataUrl: '', // Will be set dynamically
-            fallbackDataUrl: 'timeline-data.json', // Local fallback
-            defaultRepo: 'your-username/gsdc-timeline' // Replace with actual repo
-        };
-
-        // Quarter mapping
         const quarterLabels = [
             'Q1 2026', 'Q2 2026', 'Q3 2026', 'Q4 2026',
             'Q1 2027', 'Q2 2027', 'Q3 2027', 'Q4 2027',
@@ -789,19 +514,16 @@
         let filteredData = [];
         let currentView = 'gantt';
 
-        // Initialize the timeline
         document.addEventListener('DOMContentLoaded', function() {
             loadTimelineData();
         });
 
         async function loadTimelineData() {
             try {
-                // Try to load from GitHub first
-                let dataUrl = CONFIG.githubDataUrl;
-                
-                // If no GitHub URL configured, try to build it from localStorage
                 const savedRepo = localStorage.getItem('githubRepo');
-                if (!dataUrl && savedRepo) {
+                let dataUrl = null;
+                
+                if (savedRepo) {
                     dataUrl = `https://raw.githubusercontent.com/${savedRepo}/main/timeline-data.json`;
                 }
                 
@@ -811,14 +533,12 @@
                         response = await fetch(dataUrl);
                         if (!response.ok) throw new Error('GitHub fetch failed');
                     } catch (e) {
-                        console.warn('Failed to load from GitHub:', e);
                         response = null;
                     }
                 }
                 
-                // Fallback to local file
                 if (!response) {
-                    response = await fetch(CONFIG.fallbackDataUrl);
+                    response = await fetch('timeline-data.json');
                 }
                 
                 if (response.ok) {
@@ -828,27 +548,19 @@
                 }
                 
             } catch (error) {
-                console.error('Error loading timeline data:', error);
-                // Use sample data as final fallback
                 timelineData = getSampleData();
                 document.getElementById('errorMessage').classList.remove('hidden');
             }
             
-            // Initialize views
             filteredData = [...timelineData];
             document.getElementById('loadingIndicator').classList.add('hidden');
-            document.querySelectorAll('.gantt-view, .milestone-view, .calendar-view').forEach(el => 
-                el.classList.remove('hidden')
-            );
+            document.getElementById('ganttView').classList.remove('hidden');
             
             updateStats();
             renderGanttView();
-            renderMilestoneView();
-            renderCalendarView();
         }
 
         function getSampleData() {
-            // Return comprehensive sample data with a few key initiatives
             return [
                 {
                     id: 'p1-messaging',
@@ -868,8 +580,7 @@
                     leads: 'Tammy and Jennie (GSDC), comms staff, Marketing Committee',
                     metrics: [
                         'Distribution reach: 100% of partners by Q3 2026',
-                        'Usage rate: 75% partners actively using within 12 months',
-                        'Social engagement: 20% increase across partner channels'
+                        'Usage rate: 75% partners actively using within 12 months'
                     ]
                 },
                 {
@@ -890,7 +601,6 @@
                     leads: 'Leslie and Jennie (GSDC), Initiative Foundation, SBDC',
                     metrics: [
                         '1 ecosystem map created and published',
-                        '1 investor access guide produced',
                         'Startups supported → +10-15% increase over 2026 baseline'
                     ]
                 },
@@ -912,30 +622,7 @@
                     leads: 'Jennie and Tammy (GSDC), comms team, investor services group',
                     metrics: [
                         'Open & engagement rates → +10% annually over 2026 baseline',
-                        'Documented usage → +10% annually',
                         'Quarterly satisfaction rating → Maintain ≥ 4.5/5'
-                    ]
-                },
-                {
-                    id: 'sa3-grant-calendar',
-                    name: 'Federal Grant Calendar & Watchlist',
-                    category: 'addition-3',
-                    categoryLabel: 'Addition 3: Federal Funding',
-                    startQuarter: 0,
-                    duration: 16,
-                    status: 'in-progress',
-                    progress: 30,
-                    description: 'Maintain a central, live-updated calendar and database of upcoming federal/state grant opportunities with deadlines, partners, and alignment notes.',
-                    deliverables: [
-                        'Quarterly updates with new opportunities',
-                        'Filters by topic (infrastructure, workforce, broadband)',
-                        'Color-coded readiness and fit ratings'
-                    ],
-                    leads: 'GSDC staff + partner staff (Initiative Foundation)',
-                    metrics: [
-                        'Watchlist usage stats → +10% annually over 2026 baseline',
-                        'Joint applications informed by tool → +10% annually',
-                        'Partner satisfaction → ≥ 4.5/5 average score'
                     ]
                 },
                 {
@@ -947,7 +634,7 @@
                     duration: 14,
                     status: 'not-started',
                     progress: 0,
-                    description: 'Launch a regional campaign to attract back former residents—including alumni, young professionals, and remote workers—with job, housing, and lifestyle messaging.',
+                    description: 'Launch a regional campaign to attract back former residents—including alumni, young professionals, and remote workers.',
                     deliverables: [
                         '"Come Back to Greater St. Cloud" digital campaign',
                         'Alumni and ex-resident database',
@@ -956,35 +643,29 @@
                     leads: 'Gail, Tammy, GSDC Comms and Talent teams, college alumni offices',
                     metrics: [
                         'Website traffic & social engagement → +10% annually',
-                        'Alumni database growth → +10% annually',
-                        'Inquiries & relocations tracked → +10% annually'
+                        'Alumni database growth → +10% annually'
                     ]
                 }
             ];
         }
 
-        // View switching
         function switchView(view) {
             currentView = view;
             
-            // Update active button
             document.querySelectorAll('.view-btn').forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
             
-            // Update view title
             const titles = {
                 'gantt': 'Gantt Timeline View',
-                'milestone': 'Milestone Timeline View',
+                'milestone': 'Milestone Timeline View', 
                 'calendar': 'Calendar Timeline View'
             };
             document.getElementById('viewTitle').textContent = titles[view];
             
-            // Show/hide views
-            document.querySelectorAll('.gantt-view, .milestone-view, .calendar-view').forEach(v => v.classList.remove('active'));
-            document.getElementById(view + 'View').classList.add('active');
+            document.querySelectorAll('.gantt-view').forEach(v => v.classList.remove('active'));
+            document.getElementById('ganttView').classList.add('active');
         }
 
-        // Filtering
         function applyFilters() {
             const pillarFilter = document.getElementById('pillarFilter').value;
             const statusFilter = document.getElementById('statusFilter').value;
@@ -995,71 +676,15 @@
                 const matchesStatus = !statusFilter || item.status === statusFilter;
                 const matchesSearch = !searchTerm || 
                     item.name.toLowerCase().includes(searchTerm) || 
-                    item.description.toLowerCase().includes(searchTerm) ||
-                    item.categoryLabel.toLowerCase().includes(searchTerm);
+                    item.description.toLowerCase().includes(searchTerm);
                 
                 return matchesPillar && matchesStatus && matchesSearch;
             });
             
             updateStats();
             renderGanttView();
-            renderMilestoneView();
-            renderCalendarView();
-            updateActiveFilters();
         }
 
-        function updateActiveFilters() {
-            const activeFiltersDiv = document.getElementById('activeFilters');
-            const filters = [];
-            
-            const pillarFilter = document.getElementById('pillarFilter');
-            const statusFilter = document.getElementById('statusFilter');
-            const searchInput = document.getElementById('searchInput');
-            
-            if (pillarFilter.value) {
-                filters.push({
-                    type: 'pillar',
-                    value: pillarFilter.value,
-                    label: pillarFilter.options[pillarFilter.selectedIndex].text
-                });
-            }
-            
-            if (statusFilter.value) {
-                filters.push({
-                    type: 'status',
-                    value: statusFilter.value,
-                    label: statusFilter.options[statusFilter.selectedIndex].text
-                });
-            }
-            
-            if (searchInput.value) {
-                filters.push({
-                    type: 'search',
-                    value: searchInput.value,
-                    label: `"${searchInput.value}"`
-                });
-            }
-            
-            activeFiltersDiv.innerHTML = filters.map(filter => 
-                `<div class="filter-tag">
-                    ${filter.label}
-                    <span class="remove" onclick="removeFilter('${filter.type}', '${filter.value}')">&times;</span>
-                </div>`
-            ).join('');
-        }
-
-        function removeFilter(type, value) {
-            if (type === 'pillar') {
-                document.getElementById('pillarFilter').value = '';
-            } else if (type === 'status') {
-                document.getElementById('statusFilter').value = '';
-            } else if (type === 'search') {
-                document.getElementById('searchInput').value = '';
-            }
-            applyFilters();
-        }
-
-        // Stats update
         function updateStats() {
             const total = filteredData.length;
             const completed = filteredData.filter(item => item.status === 'completed').length;
@@ -1070,7 +695,6 @@
             document.getElementById('inProgressItems').textContent = `In Progress: ${inProgress}`;
         }
 
-        // Gantt View Rendering
         function renderGanttView() {
             const ganttRows = document.getElementById('ganttRows');
             ganttRows.innerHTML = '';
@@ -1079,7 +703,6 @@
                 const row = document.createElement('div');
                 row.className = 'gantt-row';
                 
-                // Task info column
                 const taskInfo = document.createElement('div');
                 taskInfo.className = 'task-info';
                 taskInfo.onclick = () => openTaskModal(item);
@@ -1092,15 +715,12 @@
                 `;
                 row.appendChild(taskInfo);
                 
-                // Timeline cells
                 for (let i = 0; i < 16; i++) {
                     const cell = document.createElement('div');
                     cell.className = 'gantt-cell';
                     
-                    // Check if this quarter is within the task duration
                     if (i >= item.startQuarter && i < item.startQuarter + item.duration) {
                         const isStart = i === item.startQuarter;
-                        const isEnd = i === item.startQuarter + item.duration - 1;
                         
                         const bar = document.createElement('div');
                         bar.className = `gantt-bar ${item.category}`;
@@ -1109,26 +729,27 @@
                             openTaskModal(item);
                         };
                         
-                        // Calculate position and width
-                        let left = 0;
-                        let width = 100;
+                        let left = 10;
+                        let width = 80;
                         
-                        if (item.duration === 1) {
-                            left = 10;
-                            width = 80;
-                        } else if (isStart) {
-                            left = 10;
-                            width = 90;
-                        } else if (isEnd) {
-                            left = 0;
-                            width = 90;
+                        if (item.duration > 1) {
+                            if (isStart) {
+                                left = 10;
+                                width = 90;
+                            } else if (i === item.startQuarter + item.duration - 1) {
+                                left = 0;
+                                width = 90;
+                            } else {
+                                left = 0;
+                                width = 100;
+                            }
                         }
                         
                         bar.style.left = left + '%';
                         bar.style.width = width + '%';
                         
-                        if (isStart || item.duration === 1) {
-                            bar.textContent = item.progress > 0 ? `${item.progress}%` : '';
+                        if (isStart && item.progress > 0) {
+                            bar.textContent = `${item.progress}%`;
                         }
                         
                         cell.appendChild(bar);
@@ -1141,174 +762,6 @@
             });
         }
 
-        // Milestone View Rendering
-        function renderMilestoneView() {
-            const milestoneContent = document.getElementById('milestoneContent');
-            milestoneContent.innerHTML = '';
-            
-            const years = {
-                2026: { quarters: {}, items: [] },
-                2027: { quarters: {}, items: [] },
-                2028: { quarters: {}, items: [] },
-                2029: { quarters: {}, items: [] }
-            };
-            
-            // Group items by year and quarter
-            filteredData.forEach(item => {
-                const startYear = Math.floor(item.startQuarter / 4) + 2026;
-                const endYear = Math.floor((item.startQuarter + item.duration - 1) / 4) + 2026;
-                
-                for (let year = startYear; year <= endYear; year++) {
-                    if (years[year]) {
-                        years[year].items.push(item);
-                        
-                        // Determine which quarters this item spans in this year
-                        const yearStart = Math.max(0, item.startQuarter - (year - 2026) * 4);
-                        const yearEnd = Math.min(3, item.startQuarter + item.duration - 1 - (year - 2026) * 4);
-                        
-                        for (let q = yearStart; q <= yearEnd; q++) {
-                            if (q >= 0 && q <= 3) {
-                                const quarterKey = `Q${q + 1}`;
-                                if (!years[year].quarters[quarterKey]) {
-                                    years[year].quarters[quarterKey] = [];
-                                }
-                                years[year].quarters[quarterKey].push(item);
-                            }
-                        }
-                    }
-                }
-            });
-            
-            // Render each year
-            Object.keys(years).forEach(year => {
-                if (years[year].items.length === 0) return;
-                
-                const yearDiv = document.createElement('div');
-                yearDiv.className = 'milestone-year';
-                
-                const yearHeader = document.createElement('div');
-                yearHeader.className = 'year-header';
-                yearHeader.textContent = year;
-                yearDiv.appendChild(yearHeader);
-                
-                const quartersGrid = document.createElement('div');
-                quartersGrid.className = 'quarters-grid';
-                
-                ['Q1', 'Q2', 'Q3', 'Q4'].forEach(quarter => {
-                    const quarterCard = document.createElement('div');
-                    quarterCard.className = 'quarter-card';
-                    
-                    const quarterHeader = document.createElement('div');
-                    quarterHeader.className = 'quarter-header';
-                    quarterHeader.textContent = `${quarter} ${year}`;
-                    quarterCard.appendChild(quarterHeader);
-                    
-                    const quarterItems = document.createElement('div');
-                    quarterItems.className = 'quarter-items';
-                    
-                    const items = years[year].quarters[quarter] || [];
-                    if (items.length === 0) {
-                        quarterItems.innerHTML = '<p style="color: #666; font-style: italic;">No initiatives this quarter</p>';
-                    } else {
-                        items.forEach(item => {
-                            const milestoneItem = document.createElement('div');
-                            milestoneItem.className = `milestone-item ${item.category}`;
-                            milestoneItem.onclick = () => openTaskModal(item);
-                            milestoneItem.innerHTML = `
-                                <div class="milestone-title">
-                                    <div class="status-indicator status-${item.status}"></div>
-                                    ${item.name}
-                                </div>
-                                <div class="milestone-category">${item.categoryLabel}</div>
-                            `;
-                            quarterItems.appendChild(milestoneItem);
-                        });
-                    }
-                    
-                    quarterCard.appendChild(quarterItems);
-                    quartersGrid.appendChild(quarterCard);
-                });
-                
-                yearDiv.appendChild(quartersGrid);
-                milestoneContent.appendChild(yearDiv);
-            });
-        }
-
-        // Calendar View Rendering
-        function renderCalendarView() {
-            const calendarContent = document.getElementById('calendarContent');
-            calendarContent.innerHTML = '';
-            
-            // Group by quarters for compact calendar view
-            const quarterGroups = {};
-            
-            filteredData.forEach(item => {
-                for (let i = item.startQuarter; i < item.startQuarter + item.duration; i++) {
-                    const quarterLabel = quarterLabels[i];
-                    if (quarterLabel) {
-                        if (!quarterGroups[quarterLabel]) {
-                            quarterGroups[quarterLabel] = [];
-                        }
-                        quarterGroups[quarterLabel].push(item);
-                    }
-                }
-            });
-            
-            // Render quarters in a grid
-            const years = ['2026', '2027', '2028', '2029'];
-            years.forEach(year => {
-                const yearDiv = document.createElement('div');
-                yearDiv.innerHTML = `<h3 style="color: var(--gsdc-blue); margin: 2rem 0 1rem 0;">${year}</h3>`;
-                calendarContent.appendChild(yearDiv);
-                
-                const calendarGrid = document.createElement('div');
-                calendarGrid.className = 'calendar-grid';
-                
-                for (let q = 1; q <= 4; q++) {
-                    const quarterKey = `Q${q} ${year}`;
-                    const quarterDiv = document.createElement('div');
-                    quarterDiv.className = 'calendar-quarter';
-                    
-                    const header = document.createElement('div');
-                    header.className = 'calendar-quarter-header';
-                    header.textContent = quarterKey;
-                    quarterDiv.appendChild(header);
-                    
-                    const content = document.createElement('div');
-                    content.className = 'calendar-quarter-content';
-                    
-                    const items = quarterGroups[quarterKey] || [];
-                    if (items.length === 0) {
-                        content.innerHTML = '<p style="color: #666; font-style: italic; font-size: 0.8rem;">No initiatives</p>';
-                    } else {
-                        // Remove duplicates
-                        const uniqueItems = items.filter((item, index, self) => 
-                            index === self.findIndex(i => i.id === item.id)
-                        );
-                        
-                        uniqueItems.forEach(item => {
-                            const calendarItem = document.createElement('div');
-                            calendarItem.className = `calendar-item ${item.category}`;
-                            calendarItem.onclick = () => openTaskModal(item);
-                            calendarItem.innerHTML = `
-                                <div style="display: flex; align-items: center; gap: 0.5rem;">
-                                    <div class="status-indicator status-${item.status}"></div>
-                                    <span style="font-weight: 600;">${item.name}</span>
-                                </div>
-                            `;
-                            content.appendChild(calendarItem);
-                        });
-                    }
-                    
-                    quarterDiv.appendChild(content);
-                    calendarGrid.appendChild(quarterDiv);
-                }
-                
-                calendarContent.appendChild(calendarGrid);
-            });
-        }
-
-        // Task Detail Modal
         function openTaskModal(item) {
             const modal = document.getElementById('taskModal');
             const modalTitle = document.getElementById('modalTitle');
@@ -1369,30 +822,16 @@
             document.getElementById('taskModal').style.display = 'none';
         }
 
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            const modal = document.getElementById('taskModal');
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        }
-
-        // Export functionality
         function exportTimeline() {
-            // Create export content
             const exportData = {
                 title: 'GSDC Strategic Plan Timeline 2026-2029',
                 exportDate: new Date().toLocaleDateString(),
-                currentView: currentView,
                 totalItems: filteredData.length,
                 items: filteredData.map(item => ({
                     name: item.name,
                     category: item.categoryLabel,
                     status: item.status,
                     progress: item.progress,
-                    startQuarter: quarterLabels[item.startQuarter],
-                    duration: item.duration,
-                    endQuarter: quarterLabels[item.startQuarter + item.duration - 1],
                     description: item.description,
                     deliverables: item.deliverables,
                     leads: item.leads,
@@ -1400,147 +839,56 @@
                 }))
             };
             
-            // Create export window
             const exportWindow = window.open('', '_blank');
             exportWindow.document.write(`
                 <html>
                 <head>
                     <title>${exportData.title}</title>
                     <style>
-                        body { 
-                            font-family: Arial, sans-serif; 
-                            margin: 2rem; 
-                            line-height: 1.6;
-                            color: #333;
-                        }
-                        h1, h2, h3 { 
-                            color: #2C5AA0; 
-                        }
-                        .item { 
-                            border: 1px solid #ddd; 
-                            padding: 1.5rem; 
-                            margin: 1rem 0; 
-                            border-radius: 8px;
-                            page-break-inside: avoid;
-                        }
-                        .item-header {
-                            background: #E8F1FF;
-                            margin: -1.5rem -1.5rem 1rem -1.5rem;
-                            padding: 1rem 1.5rem;
-                            border-radius: 8px 8px 0 0;
-                        }
-                        .item-title {
-                            font-size: 1.2rem;
-                            font-weight: 600;
-                            margin-bottom: 0.5rem;
-                        }
-                        .item-meta {
-                            font-size: 0.9rem;
-                            color: #666;
-                        }
-                        .section {
-                            margin: 1rem 0;
-                        }
-                        .section h4 {
-                            margin-bottom: 0.5rem;
-                            color: #2C5AA0;
-                        }
-                        ul {
-                            margin-left: 1.5rem;
-                        }
-                        li {
-                            margin-bottom: 0.3rem;
-                        }
-                        .summary {
-                            background: #f8f9fa;
-                            padding: 1rem;
-                            border-radius: 8px;
-                            margin-bottom: 2rem;
-                        }
-                        @media print {
-                            .item {
-                                page-break-inside: avoid;
-                            }
-                        }
+                        body { font-family: Arial, sans-serif; margin: 2rem; color: #333; }
+                        h1 { color: #2C5AA0; }
+                        .item { border: 1px solid #ddd; padding: 1.5rem; margin: 1rem 0; border-radius: 8px; }
+                        .item-header { background: #E8F1FF; margin: -1.5rem -1.5rem 1rem -1.5rem; padding: 1rem 1.5rem; border-radius: 8px 8px 0 0; }
+                        .item-title { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem; }
+                        h4 { color: #2C5AA0; margin-bottom: 0.5rem; }
+                        ul { margin-left: 1.5rem; }
+                        li { margin-bottom: 0.3rem; }
                     </style>
                 </head>
                 <body>
                     <h1>${exportData.title}</h1>
-                    <div class="summary">
-                        <p><strong>Export Date:</strong> ${exportData.exportDate}</p>
-                        <p><strong>View:</strong> ${exportData.currentView.charAt(0).toUpperCase() + exportData.currentView.slice(1)}</p>
-                        <p><strong>Total Items:</strong> ${exportData.totalItems}</p>
-                    </div>
+                    <p><strong>Export Date:</strong> ${exportData.exportDate}</p>
+                    <p><strong>Total Items:</strong> ${exportData.totalItems}</p>
                     
                     ${exportData.items.map(item => `
                         <div class="item">
                             <div class="item-header">
                                 <div class="item-title">${item.name}</div>
-                                <div class="item-meta">
-                                    ${item.category} | Status: ${item.status.replace('-', ' ').toUpperCase()} | Progress: ${item.progress}%
-                                </div>
+                                <div>${item.category} | ${item.status.toUpperCase()} | ${item.progress}% Complete</div>
                             </div>
-                            
-                            <div class="section">
-                                <h4>Timeline</h4>
-                                <p><strong>Start:</strong> ${item.startQuarter || 'TBD'} | <strong>Duration:</strong> ${item.duration} quarter${item.duration > 1 ? 's' : ''} | <strong>End:</strong> ${item.endQuarter || 'TBD'}</p>
-                            </div>
-                            
-                            <div class="section">
-                                <h4>Description</h4>
-                                <p>${item.description}</p>
-                            </div>
-                            
-                            <div class="section">
-                                <h4>Key Deliverables</h4>
-                                <ul>
-                                    ${item.deliverables.map(deliverable => `<li>${deliverable}</li>`).join('')}
-                                </ul>
-                            </div>
-                            
-                            <div class="section">
-                                <h4>Project Leads</h4>
-                                <p>${item.leads}</p>
-                            </div>
-                            
-                            <div class="section">
-                                <h4>Success Metrics</h4>
-                                <ul>
-                                    ${item.metrics.map(metric => `<li>${metric}</li>`).join('')}
-                                </ul>
-                            </div>
+                            <h4>Description</h4>
+                            <p>${item.description}</p>
+                            <h4>Deliverables</h4>
+                            <ul>${item.deliverables.map(d => `<li>${d}</li>`).join('')}</ul>
+                            <h4>Project Leads</h4>
+                            <p>${item.leads}</p>
+                            <h4>Success Metrics</h4>
+                            <ul>${item.metrics.map(m => `<li>${m}</li>`).join('')}</ul>
                         </div>
                     `).join('')}
                 </body>
                 </html>
             `);
             exportWindow.document.close();
-            
-            // Trigger print dialog after a short delay
-            setTimeout(() => {
-                exportWindow.print();
-            }, 500);
+            setTimeout(() => exportWindow.print(), 500);
         }
 
-        // Keyboard shortcuts
-        document.addEventListener('keydown', function(e) {
-            // ESC to close modal
-            if (e.key === 'Escape') {
+        window.onclick = function(event) {
+            const modal = document.getElementById('taskModal');
+            if (event.target === modal) {
                 closeModal();
             }
-            
-            // Ctrl/Cmd + F to focus search
-            if ((e.ctrlKey || e.metaKey) && e.key === 'f') {
-                e.preventDefault();
-                document.getElementById('searchInput').focus();
-            }
-            
-            // Ctrl/Cmd + E to export
-            if ((e.ctrlKey || e.metaKey) && e.key === 'e') {
-                e.preventDefault();
-                exportTimeline();
-            }
-        });
+        }
     </script>
 </body>
 </html>
