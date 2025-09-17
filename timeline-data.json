@@ -5,19 +5,19 @@
     "category": "pillar-1",
     "categoryLabel": "Pillar 1: Unified Regional Leadership",
     "status": "in-progress",
-    "progress": 23,
+    "progress": 27,
     "description": "Develop a shared set of key messages, visuals, and data points to align how partners communicate the region's identity and priorities.",
-    "startQuarter": 4,
+    "startQuarter": 9,
     "duration": 3,
-    "leads": "Tammy and Jennie (GSDC), comms staff, Marketing Committee",
-    "timeline": "Pilot Q3 2026 → Review and update every 6 months",
+    "leads": "JC and crew",
+    "timeline": "",
     "metrics": [
       "Distribution reach: 100% of partners by Q3 2026",
       "Usage rate: 75% partners actively using within 12 months",
       "Social engagement: 20% increase across partner channels",
       "Downloads: 250+ in Year 1"
     ],
-    "notes": "testy mc test\n\n"
+    "notes": "Pilot Q3 2026 → Review and update every 6 months\n\ntesty mc test\n\ntesting 11am 9/17\n\n"
   },
   {
     "id": "p1-roundtables",
@@ -29,8 +29,8 @@
     "description": "Host annual roundtables with city, county, school, and economic development leaders to coordinate capital planning, permitting, and legislative strategy.",
     "startQuarter": 1,
     "duration": 3,
-    "leads": "MLA WDR",
-    "timeline": "",
+    "leads": "NeTia and Leslie (GSDC), city and county staff, Dan Weber (Initiative Foundation)",
+    "timeline": "Launch Q3 2026; continue annually",
     "metrics": [
       "≥ 90% of invited stakeholders attend annually",
       "3 collaborative funding applications influenced each year",
