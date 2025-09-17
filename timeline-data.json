@@ -5,11 +5,11 @@
     "category": "pillar-1",
     "categoryLabel": "Pillar 1: Unified Regional Leadership",
     "status": "in-progress",
-    "progress": 82,
+    "progress": 23,
     "description": "Develop a shared set of key messages, visuals, and data points to align how partners communicate the region's identity and priorities.",
-    "startQuarter": 9,
-    "duration": 6,
-    "leads": "micky et al",
+    "startQuarter": 4,
+    "duration": 3,
+    "leads": "jane et all",
     "timeline": "",
     "metrics": [
       "Distribution reach: 100% of partners by Q3 2026",
@@ -17,7 +17,7 @@
       "Social engagement: 20% increase across partner channels",
       "Downloads: 250+ in Year 1"
     ],
-    "notes": "Pilot Q3 2026 → Review and update every 6 months\n\ntest test test\n\n"
+    "notes": "testy mc test\n\n"
   },
   {
     "id": "p1-roundtables",
