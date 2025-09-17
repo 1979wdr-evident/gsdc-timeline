@@ -43,19 +43,19 @@
     "name": "Civic Onboarding Protocol",
     "category": "pillar-1",
     "categoryLabel": "Pillar 1: Unified Regional Leadership",
-    "status": "not-started",
-    "progress": 0,
+    "status": "in-progress",
+    "progress": 23,
     "description": "Develop and deliver a regional onboarding experience for new elected officials, public-sector staff, and institutional leaders.",
-    "startQuarter": 0,
+    "startQuarter": 3,
     "duration": 2,
     "leads": "Tammy (design), NeTia (outreach), Board Chair and volunteers",
-    "timeline": "Begin Q1 2026; repeat post-election and key leadership transitions",
+    "timeline": "",
     "metrics": [
       "100% packet delivery",
       "≥ 80% 1:1 completion rate",
       "≥ 50% of new leaders participate in at least one GSDC event/initiative within 6 months"
     ],
-    "notes": ""
+    "notes": "Begin Q1 2026; repeat post-election and key leadership transitions"
   },
   {
     "id": "p1-playbook",
