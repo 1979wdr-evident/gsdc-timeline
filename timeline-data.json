@@ -2,36 +2,497 @@
   {
     "id": "p1-messaging",
     "name": "Regional Messaging Toolkit",
+    "category": "pillar-1",
+    "categoryLabel": "Pillar 1: Unified Regional Leadership",
     "status": "in-progress",
     "progress": 78,
-    "description": "Develop a shared set of key messages, visuals, and data points to align how partners communicate the regions identity and priorities."
+    "description": "Develop a shared set of key messages, visuals, and data points to align how partners communicate the region's identity and priorities.",
+    "startQuarter": 2,
+    "duration": 2,
+    "leads": "Tammy and Jennie (GSDC), comms staff, Marketing Committee",
+    "timeline": "Pilot Q3 2026 → Review and update every 6 months",
+    "metrics": [
+      "Distribution reach: 100% of partners by Q3 2026",
+      "Usage rate: 75% partners actively using within 12 months",
+      "Social engagement: 20% increase across partner channels",
+      "Downloads: 250+ in Year 1"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "p1-roundtables",
+    "name": "Regional Infrastructure & Policy Roundtables",
+    "category": "pillar-1",
+    "categoryLabel": "Pillar 1: Unified Regional Leadership",
+    "status": "in-progress",
+    "progress": 12,
+    "description": "Host annual roundtables with city, county, school, and economic development leaders to coordinate capital planning, permitting, and legislative strategy.",
+    "startQuarter": 2,
+    "duration": 1,
+    "leads": "NeTia and Leslie (GSDC), city and county staff, Dan Weber (Initiative Foundation)",
+    "timeline": "Launch Q3 2026; continue annually",
+    "metrics": [
+      "≥ 90% of invited stakeholders attend annually",
+      "3 collaborative funding applications influenced each year",
+      "1–2 regionally aligned bonding/policy requests submitted per legislative session"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "p1-onboarding",
+    "name": "Civic Onboarding Protocol",
+    "category": "pillar-1",
+    "categoryLabel": "Pillar 1: Unified Regional Leadership",
+    "status": "not-started",
+    "progress": 0,
+    "description": "Develop and deliver a regional onboarding experience for new elected officials, public-sector staff, and institutional leaders.",
+    "startQuarter": 0,
+    "duration": 2,
+    "leads": "Tammy (design), NeTia (outreach), Board Chair and volunteers",
+    "timeline": "Begin Q1 2026; repeat post-election and key leadership transitions",
+    "metrics": [
+      "100% packet delivery",
+      "≥ 80% 1:1 completion rate",
+      "≥ 50% of new leaders participate in at least one GSDC event/initiative within 6 months"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "p1-playbook",
+    "name": "Public Investment Playbook",
+    "category": "pillar-1",
+    "categoryLabel": "Pillar 1: Unified Regional Leadership",
+    "status": "not-started",
+    "progress": 0,
+    "description": "A shared reference guide listing top regional infrastructure priorities with project status, costs, and lead agencies—used for strategic fundraising and alignment.",
+    "startQuarter": 2,
+    "duration": 1,
+    "leads": "Leslie and Tammy (GSDC), joint partner task force, city/county staff",
+    "timeline": "Draft Q3 2026; updated annually",
+    "metrics": [
+      "5–8 priority projects included and tracked",
+      "$5M secured by 2029",
+      "≥ 50% of projects with cross-jurisdictional support"
+    ],
+    "notes": ""
   },
   {
     "id": "p2-startup-journey",
-    "name": "Startup Journey Map & Mentorship",
+    "name": "Startup Journey Map & Mentorship Exchange",
+    "category": "pillar-2",
+    "categoryLabel": "Pillar 2: Business Support & Growth",
     "status": "in-progress",
     "progress": 25,
-    "description": "Clarify the idea-to-exit business growth path and launch a structured mentorship network."
+    "description": "Clarify the \"idea-to-exit\" business growth path and launch a structured mentorship network to guide founders and early-stage employers.",
+    "startQuarter": 0,
+    "duration": 3,
+    "leads": "Leslie and Jennie (GSDC), Initiative Foundation, SBDC, Great North Labs",
+    "timeline": "Map and mentor list by Q1 2026; first pitch night by Q2 2026",
+    "metrics": [
+      "1 ecosystem map created and published",
+      "1 investor access guide produced",
+      "1 annual pitch competition held (2026–2029)",
+      "Startups supported → +10–15% increase over 2026 baseline"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "p2-bre-cycles",
+    "name": "Sector-Based Business Retention & Expansion (BRE) Cycles",
+    "category": "pillar-2",
+    "categoryLabel": "Pillar 2: Business Support & Growth",
+    "status": "not-started",
+    "progress": 0,
+    "description": "Modernize BRE strategy by organizing outreach by industry cluster and firm size—targeting specific expansion barriers.",
+    "startQuarter": 1,
+    "duration": 2,
+    "leads": "GSDC economic development team, city economic partners, SCSU for data analysis",
+    "timeline": "Manufacturing pilot in Q2 2026",
+    "metrics": [
+      "# of BRE visits: Goal of 100 annually, with 60% in primary sectors",
+      "% of firms receiving structured follow-up: +10–15% over 2026 baseline",
+      "# of businesses supported in expansion: +10–15% over 2026 baseline"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "p2-capital-access",
+    "name": "Capital Access Mapping & Coaching",
+    "category": "pillar-2",
+    "categoryLabel": "Pillar 2: Business Support & Growth",
+    "status": "not-started",
+    "progress": 0,
+    "description": "Create a centralized capital navigation system for businesses—covering grants, loans, equity, and SSBCI pathways.",
+    "startQuarter": 1,
+    "duration": 2,
+    "leads": "GSDC, SBDC, local banks, capital mapping partners",
+    "timeline": "Launch Q2 2026",
+    "metrics": [
+      "Workshops: ≥ 5 annually; metric = # of attendees supported",
+      "Businesses receiving support: +10% increase over 2025 Thrive baseline",
+      "Capital raised via GSDC pathways: Directional tracking based on ILT scholarship baseline"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "p2-succession",
+    "name": "Business Succession & Continuity Strategy",
+    "category": "pillar-2",
+    "categoryLabel": "Pillar 2: Business Support & Growth",
+    "status": "not-started",
+    "progress": 0,
+    "description": "Help owners in transition with tools, financial matchmaking, and successor support—especially in rural and legacy sectors.",
+    "startQuarter": 1,
+    "duration": 3,
+    "leads": "GSDC, CPAs, estate attorneys, local lenders",
+    "timeline": "Toolkit by Q2 2026; pilot connector launch Q4 2026",
+    "metrics": [
+      "Succession Toolkit Downloads: 60 by 2029 (≈20 annually)",
+      "Transitions Supported: ≥ 5 demonstration cases",
+      "Businesses Supported in Continuity: +10% average annually over 2026 baseline"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "p3-investor-tiers",
+    "name": "Relaunched Investor Tier Model",
+    "category": "pillar-3",
+    "categoryLabel": "Pillar 3: Amplifying Return",
+    "status": "not-started",
+    "progress": 0,
+    "description": "Modernize GSDC's investor tiers to clearly link financial commitments with visibility, involvement, and regional impact.",
+    "startQuarter": 0,
+    "duration": 1,
+    "leads": "NeTia (GSDC), SAC team, investor relations volunteers",
+    "timeline": "Relaunch for 2026 campaign cycle → Tier packets finalized by Q4 2025",
+    "metrics": [
+      "Investor renewals at same or higher tier → +10% over 2026 baseline",
+      "Average annual investor contribution → +5–10% increase over 2026 baseline",
+      "Overall investor retention rate → maintain at ≥ 85%"
+    ],
+    "notes": ""
   },
   {
     "id": "p3-roi-dashboard",
     "name": "Quarterly ROI Dashboard & Video Briefings",
+    "category": "pillar-3",
+    "categoryLabel": "Pillar 3: Amplifying Return",
     "status": "in-progress",
     "progress": 20,
-    "description": "Deliver investor updates through a lightweight, consistent format that is visual, digestible, and usable."
+    "description": "Deliver investor updates through a lightweight, consistent format that's visual, digestible, and usable in meetings or pitches.",
+    "startQuarter": 0,
+    "duration": 2,
+    "leads": "Jennie and Tammy (GSDC), comms team, investor services group",
+    "timeline": "Launch pilot Q1 2026 → Quarterly rhythm established by Q3 2026",
+    "metrics": [
+      "Open & engagement rates → +10% annually over 2026 baseline",
+      "Documented usage → +10% annually over 2026 baseline for # of times ROI materials are cited",
+      "Quarterly satisfaction rating → Maintain ≥ 4.5/5 average score"
+    ],
+    "notes": ""
   },
   {
-    "id": "custom-1758067402088",
-    "name": "test",
-    "category": "pillar-1",
-    "categoryLabel": "Pillar 1: Unified Leadership",
+    "id": "p3-forums",
+    "name": "Investor Experience Forums & Recognition Strategy",
+    "category": "pillar-3",
+    "categoryLabel": "Pillar 3: Amplifying Return",
     "status": "not-started",
     "progress": 0,
-    "description": "testing github",
+    "description": "Host strategic, high-energy convenings that connect investors to outcomes, celebrate impact, and offer networking value.",
+    "startQuarter": 1,
+    "duration": 3,
+    "leads": "Strategic pillar leads, comms + events team, investor ops group",
+    "timeline": "Start Q2 2026 → Annual calendar coordinated by end of 2025",
+    "metrics": [
+      "Forum attendance & cross-sector participation → +10% annually over 2026 baseline",
+      "New pledges or upgraded tiers post-forum → +10% annually over 2026 baseline",
+      "Media/social reach from recognitions → +10% annually over 2026 baseline"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "a1-transition-playbook",
+    "name": "Civic Transition Playbook",
+    "category": "addition-1",
+    "categoryLabel": "Addition 1: Civic Infrastructure",
+    "status": "not-started",
+    "progress": 0,
+    "description": "A region-branded onboarding guide for new public leaders—delivered within 60 days of election or appointment.",
+    "startQuarter": 0,
+    "duration": 2,
+    "leads": "GSDC staff and board with input from city/county leadership",
+    "timeline": "Prototype Q1 2026 → Rolling implementation thereafter",
+    "metrics": [
+      "% of new leaders onboarded within 60 days → +10% annually over 2026 baseline (target ≥ 80% by 2029)",
+      "Awareness & satisfaction scores → Maintain or improve by +10% annually over 2026 baseline",
+      "Continuity of initiatives across transitions → +10% annually over 2026 baseline"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "a1-alignment-dashboard",
+    "name": "Leadership Alignment Dashboard",
+    "category": "addition-1",
+    "categoryLabel": "Addition 1: Civic Infrastructure",
+    "status": "not-started",
+    "progress": 0,
+    "description": "An internal tool to map public and institutional leaders, monitor transitions, and track alignment opportunities.",
+    "startQuarter": 2,
+    "duration": 1,
+    "leads": "Strategic operations staff with civic partnerships oversight",
+    "timeline": "Build Q3 2026 → Annual updates",
+    "metrics": [
+      "Contact & role data accuracy → +10% annually over 2026 baseline",
+      "Participation in cross-sector efforts → +10% annually over 2026 baseline",
+      "New collaborations or initiatives launched → +10% annually over 2026 baseline"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "a1-policy-briefings",
+    "name": "Policy Pulse Briefings",
+    "category": "addition-1",
+    "categoryLabel": "Addition 1: Civic Infrastructure",
+    "status": "not-started",
+    "progress": 0,
+    "description": "Annual nonpartisan briefings for civic leaders—focused on high-priority regional topics, timelines, and coordination points.",
+    "startQuarter": 1,
+    "duration": 1,
+    "leads": "GSDC with planning/policy partners (e.g., DEED, Initiative Foundation)",
+    "timeline": "Pilot Q2 2026 → Annual rhythm in 2026",
+    "metrics": [
+      "Attendance & repeat participation → +10% annually over 2026 baseline",
+      "Knowledge retention & feedback → +10% annually over 2026 baseline",
+      "Follow-up actions initiated → +10% annually over 2026 baseline"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "a2-cluster-framework",
+    "name": "Regional Cluster Identity Framework",
+    "category": "addition-2",
+    "categoryLabel": "Addition 2: Industry Specialization",
+    "status": "not-started",
+    "progress": 0,
+    "description": "Define 3-4 high-impact industry clusters based on current employer base, growth potential, and strategic assets.",
     "startQuarter": 5,
     "duration": 2,
-    "leads": "micky",
-    "deliverables": [],
-    "metrics": []
+    "leads": "Leslie and economic development team with SCSU, chambers, and industry reps",
+    "timeline": "Complete by Q2 2027",
+    "metrics": [
+      "Cluster briefs published and used → At least 1 brief per priority cluster annually",
+      "Partners adopting shared cluster language → +10% annually over 2026 baseline",
+      "Integration of clusters in workforce & BRE initiatives → +10% annually over 2026 baseline"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "a2-sector-roundtables",
+    "name": "Sector-Specific BRE Roundtables & Working Groups",
+    "category": "addition-2",
+    "categoryLabel": "Addition 2: Industry Specialization",
+    "status": "not-started",
+    "progress": 0,
+    "description": "Launch ongoing roundtables for top clusters (e.g., manufacturing, logistics, health care) to identify shared needs and policy issues.",
+    "startQuarter": 4,
+    "duration": 2,
+    "leads": "GSDC economic development team + local chambers, city staff, and SCSU research partners",
+    "timeline": "Begin with 2–3 priority clusters by Q1 2027",
+    "metrics": [
+      "Roundtable attendance & retention → +10% annually over 2026 baseline",
+      "Shared needs documented → Written summary from each roundtable",
+      "Cluster-driven initiatives launched → +10% annually over 2026 baseline"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "a2-talent-pipeline",
+    "name": "Targeted Talent Pipeline Partnerships",
+    "category": "addition-2",
+    "categoryLabel": "Addition 2: Industry Specialization",
+    "status": "not-started",
+    "progress": 0,
+    "description": "Coordinate with workforce boards, K-12 systems, and postsecondary partners to align training, recruitment, and exposure efforts with top clusters.",
+    "startQuarter": 0,
+    "duration": 3,
+    "leads": "GSDC with workforce development boards, school districts, and postsecondary partners",
+    "timeline": "Kick off planning in Q1 2026; pilots launched Q4 2026",
+    "metrics": [
+      "Students reached through exposure efforts → +10% annually over 2026 baseline",
+      "Programs aligned to cluster hiring needs → +10% annually over 2026 baseline",
+      "Employer satisfaction & engagement → Maintain ≥ 4.5/5 satisfaction rating"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "a3-grant-calendar",
+    "name": "Shared Federal Grant Calendar & Watchlist",
+    "category": "addition-3",
+    "categoryLabel": "Addition 3: Federal Funding Strategy",
+    "status": "not-started",
+    "progress": 0,
+    "description": "Maintain a central, live-updated calendar and database of upcoming federal/state grant opportunities with deadlines, partners, and alignment notes.",
+    "startQuarter": 0,
+    "duration": 1,
+    "leads": "GSDC staff TBD + partner staff (Initiative Foundation EDD staff)",
+    "timeline": "Launch Q1 2026; within 6 months of federal designation",
+    "metrics": [
+      "Watchlist usage stats → +10% annually over 2026 baseline",
+      "Joint applications informed by tool → +10% annually over 2026 baseline",
+      "Partner satisfaction with information access → ≥ 4.5/5 average score on annual survey"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "a3-technical-assistance",
+    "name": "Pre-Development Technical Assistance Pool",
+    "category": "addition-3",
+    "categoryLabel": "Addition 3: Federal Funding Strategy",
+    "status": "not-started",
+    "progress": 0,
+    "description": "Create a pooled resource of technical assistance hours or funding to help regional partners prepare shovel-worthy projects before grants are announced.",
+    "startQuarter": 2,
+    "duration": 1,
+    "leads": "GSDC, city/county public works and economic development teams, Initiative Foundation",
+    "timeline": "By Q3 2026: Draft framework for Pre-Development TA Pool",
+    "metrics": [
+      "Projects supported pre-grant → +10% annually over 2026 baseline",
+      "Funding unlocked via assistance → +10% annually over 2026 baseline",
+      "Use of pool by multiple jurisdictions → +10% annually over 2026 baseline"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "a3-grant-council",
+    "name": "Grant Alignment Council",
+    "category": "addition-3",
+    "categoryLabel": "Addition 3: Federal Funding Strategy",
+    "status": "not-started",
+    "progress": 0,
+    "description": "Establish a standing coordination group of regional grant writers, project leads, and agency partners to align applications, avoid duplication, and share knowledge.",
+    "startQuarter": 3,
+    "duration": 1,
+    "leads": "GSDC, Initiative Foundation, city/county grant staff, regional agencies",
+    "timeline": "Convene first meeting by Q4 2026",
+    "metrics": [
+      "Grants submitted jointly or with partner input → +10% annually over 2026 baseline",
+      "Cross-agency participation rates → +10% annually over 2026 baseline",
+      "Win rate for coordinated applications → +10% annually over 2026 baseline"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "a4-readiness-map",
+    "name": "Regional Housing & Land Readiness Map",
+    "category": "addition-4",
+    "categoryLabel": "Addition 4: Housing & Land Use",
+    "status": "not-started",
+    "progress": 0,
+    "description": "Create a shared inventory of developable land, housing pipeline projects, and zoning designations tied to regional economic needs.",
+    "startQuarter": 8,
+    "duration": 4,
+    "leads": "GSDC strategic ops team, city/county planners, housing agencies",
+    "timeline": "Prototype by Q1 2028; full implementation by Q4 2029",
+    "metrics": [
+      "% of jurisdictions contributing data → +10% annually over 2026 baseline",
+      "Number of sites prepared for development → +10% annually over 2026 baseline",
+      "Housing units & commercial projects tracked across status levels → +10% annually over baseline"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "a4-alignment-cohort",
+    "name": "Housing & Infrastructure Alignment Cohort",
+    "category": "addition-4",
+    "categoryLabel": "Addition 4: Housing & Land Use",
+    "status": "not-started",
+    "progress": 0,
+    "description": "Convene quarterly working group of planners, EDAs, developers, Chambers of Commerce and utilities to proactively align infrastructure planning with land/housing priorities.",
+    "startQuarter": 4,
+    "duration": 1,
+    "leads": "GSDC policy and strategy leads, utility partners, Initiative Foundation",
+    "timeline": "Draft by Q1 2027",
+    "metrics": [
+      "Infrastructure plans coordinated with housing strategy → +10% annually over 2026 baseline",
+      "Reduction in development delays linked to utility misalignment → -10% annually",
+      "Policy changes advanced through cohort recommendations → +10% annually over 2026 baseline"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "a4-impact-stories",
+    "name": "Housing Opportunity Impact Stories",
+    "category": "addition-4",
+    "categoryLabel": "Addition 4: Housing & Land Use",
+    "status": "not-started",
+    "progress": 0,
+    "description": "Package and share data-driven stories showing how housing access supports business growth, community resilience, and inclusive regional development.",
+    "startQuarter": 2,
+    "duration": 2,
+    "leads": "GSDC comms team, partner housing orgs, data partners",
+    "timeline": "Begin in Q3 2026",
+    "metrics": [
+      "Media and stakeholder reach of stories",
+      "Use of stories in grant apps and legislative advocacy",
+      "Qualitative feedback on message clarity"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "a5-boomerang-campaign",
+    "name": "Boomerang Talent Campaign",
+    "category": "addition-5",
+    "categoryLabel": "Addition 5: Talent Return",
+    "status": "not-started",
+    "progress": 0,
+    "description": "Launch a regional campaign to attract back former residents—including alumni, young professionals, and remote workers—with job, housing, and lifestyle messaging.",
+    "startQuarter": 1,
+    "duration": 2,
+    "leads": "Gail, Tammy, GSDC Comms and Talent teams, college alumni offices",
+    "timeline": "Campaign live by Q2 2026",
+    "metrics": [
+      "Website traffic & social engagement → +10% annually over 2026 baseline",
+      "Alumni & ex-resident database growth → +10% annually over 2026 baseline",
+      "Inquiries & relocations tracked via partner orgs → +10% annually over 2026 baseline"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "a5-internship-connector",
+    "name": "Regional Internship & First Career Connector",
+    "category": "addition-5",
+    "categoryLabel": "Addition 5: Talent Return",
+    "status": "not-started",
+    "progress": 0,
+    "description": "Curate opportunities for students and recent grads to access internships, apprenticeships, and early-career opportunities in high-need sectors.",
+    "startQuarter": 2,
+    "duration": 2,
+    "leads": "GSDC, HR councils, SCSU and SCTCC career centers, United Way",
+    "timeline": "Pilot system by Q3 2026; annual hiring cycle support",
+    "metrics": [
+      "Internships posted & filled → +10% annually over 2026 baseline",
+      "Employers using the Career Connector system → +10% annually over 2026 baseline",
+      "Retention of participants in region after program → +10% annually over 2026 baseline"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "a5-civic-pathways",
+    "name": "Civic Engagement Pathways for Young Professionals",
+    "category": "addition-5",
+    "categoryLabel": "Addition 5: Talent Return",
+    "status": "not-started",
+    "progress": 0,
+    "description": "Partner with civic orgs, boards, and community initiatives to create clearer ways for young professionals to engage in public life.",
+    "startQuarter": 4,
+    "duration": 2,
+    "leads": "GSDC Talent and Leadership teams, Rotary/YP groups, public sector partners",
+    "timeline": "Launch Map Q1 2027; Board Match kickoff by Q1 2028",
+    "metrics": [
+      "Participants matched to civic boards/programs → +10% annually over 2026 baseline",
+      "Repeat civic engagement rates → +10% annually over 2026 baseline",
+      "Satisfaction with leadership experiences → Maintain ≥ 4.5/5 survey rating"
+    ],
+    "notes": ""
   }
 ]
