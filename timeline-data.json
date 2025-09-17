@@ -27,16 +27,16 @@
     "status": "in-progress",
     "progress": 15,
     "description": "Host annual roundtables with city, county, school, and economic development leaders to coordinate capital planning, permitting, and legislative strategy.",
-    "startQuarter": 2,
-    "duration": 8,
-    "leads": "NeTia and Leslie (GSDC), city and county staff, Dan Weber (Initiative Foundation)",
-    "timeline": "Launch Q3 2026; continue annually",
+    "startQuarter": 9,
+    "duration": 3,
+    "leads": "MLA et al",
+    "timeline": "",
     "metrics": [
       "≥ 90% of invited stakeholders attend annually",
       "3 collaborative funding applications influenced each year",
       "1–2 regionally aligned bonding/policy requests submitted per legislative session"
     ],
-    "notes": "Launch Q3 2026; continue annually\n\ntesting for the github"
+    "notes": "testing 10am"
   },
   {
     "id": "p1-onboarding",
