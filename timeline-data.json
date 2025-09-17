@@ -5,19 +5,19 @@
     "category": "pillar-1",
     "categoryLabel": "Pillar 1: Unified Regional Leadership",
     "status": "in-progress",
-    "progress": 64,
+    "progress": 69,
     "description": "Develop a shared set of key messages, visuals, and data points to align how partners communicate the region's identity and priorities.",
-    "startQuarter": 3,
-    "duration": 3,
-    "leads": "Tammy and Jennie (GSDC), comms staff, Marketing Committee",
-    "timeline": "Pilot Q3 2026 → Review and update every 6 months",
+    "startQuarter": 6,
+    "duration": 6,
+    "leads": "tammy, jennie, netia",
+    "timeline": "",
     "metrics": [
       "Distribution reach: 100% of partners by Q3 2026",
       "Usage rate: 75% partners actively using within 12 months",
       "Social engagement: 20% increase across partner channels",
       "Downloads: 250+ in Year 1"
     ],
-    "notes": "Pilot Q3 2026 â Review and update every 6 months\n\nPilot Q3 2026 Ã¢ÂÂ Review and update every 6 months\n\nPilot Q3 2026  Review and update every 6 months"
+    "notes": "Pilot Q3 2026 → Review and update every 6 months testing 9:42am\n\n"
   },
   {
     "id": "p1-roundtables",
@@ -29,8 +29,8 @@
     "description": "Host annual roundtables with city, county, school, and economic development leaders to coordinate capital planning, permitting, and legislative strategy.",
     "startQuarter": 2,
     "duration": 8,
-    "leads": "NeTia and Leslie (GSDC), Dan Weber (Initiative Foundation)",
-    "timeline": "",
+    "leads": "NeTia and Leslie (GSDC), city and county staff, Dan Weber (Initiative Foundation)",
+    "timeline": "Launch Q3 2026; continue annually",
     "metrics": [
       "≥ 90% of invited stakeholders attend annually",
       "3 collaborative funding applications influenced each year",
@@ -48,8 +48,8 @@
     "description": "Develop and deliver a regional onboarding experience for new elected officials, public-sector staff, and institutional leaders.",
     "startQuarter": 10,
     "duration": 5,
-    "leads": "Testing",
-    "timeline": "",
+    "leads": "Tammy (design), NeTia (outreach), Board Chair and volunteers",
+    "timeline": "Begin Q1 2026; repeat post-election and key leadership transitions",
     "metrics": [
       "100% packet delivery",
       "≥ 80% 1:1 completion rate",
