@@ -10,14 +10,14 @@
     "startQuarter": 3,
     "duration": 2,
     "leads": "Tammy and Jennie (GSDC), comms staff, Marketing Committee",
-    "timeline": "Pilot Q3 2026 → Review and update every 6 months",
+    "timeline": "",
     "metrics": [
       "Distribution reach: 100% of partners by Q3 2026",
       "Usage rate: 75% partners actively using within 12 months",
       "Social engagement: 20% increase across partner channels",
       "Downloads: 250+ in Year 1"
     ],
-    "notes": "Pilot Q3 2026 â Review and update every 6 months"
+    "notes": "Pilot Q3 2026 → Review and update every 6 months\n\nPilot Q3 2026  Review and update every 6 months"
   },
   {
     "id": "p1-roundtables",
@@ -29,8 +29,8 @@
     "description": "Host annual roundtables with city, county, school, and economic development leaders to coordinate capital planning, permitting, and legislative strategy.",
     "startQuarter": 2,
     "duration": 8,
-    "leads": "NeTia and Leslie (GSDC),  Dan Weber (Initiative Foundation)",
-    "timeline": "",
+    "leads": "NeTia and Leslie (GSDC), city and county staff, Dan Weber (Initiative Foundation)",
+    "timeline": "Launch Q3 2026; continue annually",
     "metrics": [
       "≥ 90% of invited stakeholders attend annually",
       "3 collaborative funding applications influenced each year",
