@@ -5,19 +5,19 @@
     "category": "pillar-1",
     "categoryLabel": "Pillar 1: Unified Regional Leadership",
     "status": "in-progress",
-    "progress": 78,
+    "progress": 64,
     "description": "Develop a shared set of key messages, visuals, and data points to align how partners communicate the region's identity and priorities.",
-    "startQuarter": 2,
+    "startQuarter": 3,
     "duration": 2,
     "leads": "Tammy and Jennie (GSDC), comms staff, Marketing Committee",
-    "timeline": "Pilot Q3 2026 → Review and update every 6 months",
+    "timeline": "",
     "metrics": [
       "Distribution reach: 100% of partners by Q3 2026",
       "Usage rate: 75% partners actively using within 12 months",
       "Social engagement: 20% increase across partner channels",
       "Downloads: 250+ in Year 1"
     ],
-    "notes": ""
+    "notes": "Pilot Q3 2026 → Review and update every 6 months"
   },
   {
     "id": "p1-roundtables",
