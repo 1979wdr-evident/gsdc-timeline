@@ -19,5 +19,19 @@
     "status": "in-progress",
     "progress": 20,
     "description": "Deliver investor updates through a lightweight, consistent format that is visual, digestible, and usable."
+  },
+  {
+    "id": "custom-1758067402088",
+    "name": "test",
+    "category": "pillar-1",
+    "categoryLabel": "Pillar 1: Unified Leadership",
+    "status": "not-started",
+    "progress": 0,
+    "description": "testing github",
+    "startQuarter": 5,
+    "duration": 2,
+    "leads": "micky",
+    "deliverables": [],
+    "metrics": []
   }
 ]
