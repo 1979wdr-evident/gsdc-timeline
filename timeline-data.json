@@ -5,19 +5,19 @@
     "category": "pillar-1",
     "categoryLabel": "Pillar 1: Unified Regional Leadership",
     "status": "in-progress",
-    "progress": 89,
+    "progress": 32,
     "description": "Develop a shared set of key messages, visuals, and data points to align how partners communicate the region's identity and priorities.",
-    "startQuarter": 0,
+    "startQuarter": 1,
     "duration": 8,
-    "leads": "JKR",
-    "timeline": "Pilot Q3 2026 → Review and update every 6 months",
+    "leads": "Tammy and Jennie (GSDC), comms staff, Marketing Committee",
+    "timeline": "",
     "metrics": [
       "Distribution reach: 100% of partners by Q3 2026",
       "Usage rate: 75% partners actively using within 12 months",
       "Social engagement: 20% increase across partner channels",
       "Downloads: 250+ in Year 1"
     ],
-    "notes": "testing 9/19 11am"
+    "notes": "Pilot Q3 2026 → Review and update every 6 months\n\ntesting 9/19 11am"
   },
   {
     "id": "p1-roundtables",
@@ -48,8 +48,8 @@
     "description": "Develop and deliver a regional onboarding experience for new elected officials, public-sector staff, and institutional leaders.",
     "startQuarter": 1,
     "duration": 8,
-    "leads": "JCS, et al",
-    "timeline": "",
+    "leads": "Tammy (design), NeTia (outreach), Board Chair and volunteers",
+    "timeline": "Begin Q1 2026; repeat post-election and key leadership transitions",
     "metrics": [
       "100% packet delivery",
       "≥ 80% 1:1 completion rate",
@@ -164,7 +164,7 @@
     "startQuarter": 0,
     "duration": 1,
     "leads": "NeTia (GSDC), SAC team, investor relations volunteers",
-    "timeline": "Relaunch for 2026 campaign cycle ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Tier packets finalized by Q4 2025",
+    "timeline": "Relaunch for 2026 campaign cycle → Tier packets finalized by Q4 2025",
     "metrics": [
       "Investor renewals at same or higher tier → +10% over 2026 baseline",
       "Average annual investor contribution → +5–10% increase over 2026 baseline",
@@ -183,7 +183,7 @@
     "startQuarter": 0,
     "duration": 2,
     "leads": "Jennie and Tammy (GSDC), comms team, investor services group",
-    "timeline": "Launch pilot Q1 2026 ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Quarterly rhythm established by Q3 2026",
+    "timeline": "Launch pilot Q1 2026 → Quarterly rhythm established by Q3 2026",
     "metrics": [
       "Open & engagement rates → +10% annually over 2026 baseline",
       "Documented usage → +10% annually over 2026 baseline for # of times ROI materials are cited",
@@ -202,7 +202,7 @@
     "startQuarter": 1,
     "duration": 3,
     "leads": "Strategic pillar leads, comms + events team, investor ops group",
-    "timeline": "Start Q2 2026 ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Annual calendar coordinated by end of 2025",
+    "timeline": "Start Q2 2026 → Annual calendar coordinated by end of 2025",
     "metrics": [
       "Forum attendance & cross-sector participation → +10% annually over 2026 baseline",
       "New pledges or upgraded tiers post-forum → +10% annually over 2026 baseline",
@@ -221,7 +221,7 @@
     "startQuarter": 0,
     "duration": 2,
     "leads": "GSDC staff and board with input from city/county leadership",
-    "timeline": "Prototype Q1 2026 ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Rolling implementation thereafter",
+    "timeline": "Prototype Q1 2026 → Rolling implementation thereafter",
     "metrics": [
       "% of new leaders onboarded within 60 days → +10% annually over 2026 baseline (target ≥ 80% by 2029)",
       "Awareness & satisfaction scores → Maintain or improve by +10% annually over 2026 baseline",
@@ -240,7 +240,7 @@
     "startQuarter": 2,
     "duration": 1,
     "leads": "Strategic operations staff with civic partnerships oversight",
-    "timeline": "Build Q3 2026 ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Annual updates",
+    "timeline": "Build Q3 2026 → Annual updates",
     "metrics": [
       "Contact & role data accuracy → +10% annually over 2026 baseline",
       "Participation in cross-sector efforts → +10% annually over 2026 baseline",
@@ -259,7 +259,7 @@
     "startQuarter": 1,
     "duration": 1,
     "leads": "GSDC with planning/policy partners (e.g., DEED, Initiative Foundation)",
-    "timeline": "Pilot Q2 2026 ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Annual rhythm in 2026",
+    "timeline": "Pilot Q2 2026 → Annual rhythm in 2026",
     "metrics": [
       "Attendance & repeat participation → +10% annually over 2026 baseline",
       "Knowledge retention & feedback → +10% annually over 2026 baseline",
@@ -297,7 +297,7 @@
     "startQuarter": 4,
     "duration": 2,
     "leads": "GSDC economic development team + local chambers, city staff, and SCSU research partners",
-    "timeline": "Begin with 2ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ3 priority clusters by Q1 2027",
+    "timeline": "Begin with 2–3 priority clusters by Q1 2027",
     "metrics": [
       "Roundtable attendance & retention → +10% annually over 2026 baseline",
       "Shared needs documented → Written summary from each roundtable",
