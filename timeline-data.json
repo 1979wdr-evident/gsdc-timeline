@@ -240,13 +240,13 @@
     "startQuarter": 2,
     "duration": 1,
     "leads": "Strategic operations staff with civic partnerships oversight",
-    "timeline": "Build Q3 2026 ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Annual updates",
+    "timeline": "",
     "metrics": [
       "Contact & role data accuracy → +10% annually over 2026 baseline",
       "Participation in cross-sector efforts → +10% annually over 2026 baseline",
       "New collaborations or initiatives launched → +10% annually over 2026 baseline"
     ],
-    "notes": ""
+    "notes": "Build Q3 2026 \nAnnual updates"
   },
   {
     "id": "a1-policy-briefings",
