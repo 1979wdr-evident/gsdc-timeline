@@ -259,13 +259,13 @@
     "startQuarter": 1,
     "duration": 1,
     "leads": "GSDC with planning/policy partners (e.g., DEED, Initiative Foundation)",
-    "timeline": "Pilot Q2 2026 ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Annual rhythm in 2026",
+    "timeline": "",
     "metrics": [
       "Attendance & repeat participation → +10% annually over 2026 baseline",
       "Knowledge retention & feedback → +10% annually over 2026 baseline",
       "Follow-up actions initiated → +10% annually over 2026 baseline"
     ],
-    "notes": ""
+    "notes": "Pilot Q2 2026 \nAnnual rhythm in 2026"
   },
   {
     "id": "a2-cluster-framework",
