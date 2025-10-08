@@ -221,13 +221,13 @@
     "startQuarter": 0,
     "duration": 2,
     "leads": "GSDC staff and board with input from city/county leadership",
-    "timeline": "Prototype Q1 2026 ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Rolling implementation thereafter",
+    "timeline": "",
     "metrics": [
       "% of new leaders onboarded within 60 days → +10% annually over 2026 baseline (target ≥ 80% by 2029)",
       "Awareness & satisfaction scores → Maintain or improve by +10% annually over 2026 baseline",
       "Continuity of initiatives across transitions → +10% annually over 2026 baseline"
     ],
-    "notes": ""
+    "notes": "Prototype Q1 2026 \nRolling implementation thereafter"
   },
   {
     "id": "a1-alignment-dashboard",
