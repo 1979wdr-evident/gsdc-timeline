@@ -44,7 +44,7 @@
     "category": "pillar-1",
     "categoryLabel": "Pillar 1: Unified Regional Leadership",
     "status": "not-started",
-    "progress": null,
+    "progress": 0,
     "description": "Develop and deliver a regional onboarding experience for new elected officials, public-sector staff, and institutional leaders.",
     "startQuarter": 1,
     "duration": 8,
