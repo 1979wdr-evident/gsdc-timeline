@@ -81,20 +81,20 @@
     "name": "Startup Journey Map & Mentorship Exchange",
     "category": "pillar-2",
     "categoryLabel": "Pillar 2: Business Support & Growth",
-    "status": "in-progress",
-    "progress": 25,
+    "status": "not-started",
+    "progress": 0,
     "description": "Clarify the \"idea-to-exit\" business growth path and launch a structured mentorship network to guide founders and early-stage employers.",
     "startQuarter": 0,
     "duration": 3,
     "leads": "Leslie and Jennie (GSDC), Initiative Foundation, SBDC, Great North Labs",
-    "timeline": "Map and mentor list by Q1 2026; first pitch night by Q2 2026",
+    "timeline": "",
     "metrics": [
       "1 ecosystem map created and published",
       "1 investor access guide produced",
       "1 annual pitch competition held (2026–2029)",
       "Startups supported → +10–15% increase over 2026 baseline"
     ],
-    "notes": ""
+    "notes": "Map and mentor list by Q1 2026; first pitch night by Q2 2026"
   },
   {
     "id": "p2-bre-cycles",
