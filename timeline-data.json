@@ -297,13 +297,13 @@
     "startQuarter": 4,
     "duration": 2,
     "leads": "GSDC economic development team + local chambers, city staff, and SCSU research partners",
-    "timeline": "Begin with 2ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ3 priority clusters by Q1 2027",
+    "timeline": "",
     "metrics": [
       "Roundtable attendance & retention → +10% annually over 2026 baseline",
       "Shared needs documented → Written summary from each roundtable",
       "Cluster-driven initiatives launched → +10% annually over 2026 baseline"
     ],
-    "notes": ""
+    "notes": "Begin with priority clusters by Q1 2027"
   },
   {
     "id": "a2-talent-pipeline",
