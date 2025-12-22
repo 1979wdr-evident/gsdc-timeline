@@ -17,7 +17,7 @@
       "Social engagement: 20% increase across partner channels",
       "Downloads: 250+ in Year 1"
     ],
-    "notes": "Pilot Q3 2026  Review and update every 6 months\n\nPilot Q3 2026  Review and update every 6 months\n\ntesting v3 5pm 9/30\ntesting v4 10/6"
+    "notes": "Pilot Q3 2026 → Review and update every 6 months\n\nPilot Q3 2026  Review and update every 6 months\n\nPilot Q3 2026  Review and update every 6 months\n\ntesting v3 5pm 9/30\ntesting v4 10/6"
   },
   {
     "id": "p1-roundtables",
@@ -30,7 +30,7 @@
     "startQuarter": 1,
     "duration": 3,
     "leads": "NeTia and Leslie (GSDC), city and county staff, Dan Weber (Initiative Foundation)",
-    "timeline": "",
+    "timeline": "Launch Q3 2026; continue annually",
     "metrics": [
       "≥ 90% of invited stakeholders attend annually",
       "3 collaborative funding applications influenced each year",
@@ -49,11 +49,11 @@
     "startQuarter": 1,
     "duration": 8,
     "leads": "Tammy (design), NeTia (outreach), Board Chair and volunteers",
-    "timeline": "",
+    "timeline": "Begin Q1 2026; repeat post-election and key leadership transitions",
     "metrics": [
       "100% packet delivery",
       "≥ 80% 1:1 completion rate",
-      "≥ 50% of new leaders participate in at least one GSDC event/initiative within 6 months"
+      "≥ 50% of new leaders participate in at least one Greater St. Cloud event/initiative within 6 months"
     ],
     "notes": "Begin Q1 2026; repeat post-election and key leadership transitions\n\nchecking testing mode 9/19"
   },
@@ -87,7 +87,7 @@
     "startQuarter": 0,
     "duration": 3,
     "leads": "Leslie and Jennie (GSDC), Initiative Foundation, SBDC, Great North Labs",
-    "timeline": "",
+    "timeline": "Map and mentor list by Q1 2026; first pitch night by Q2 2026",
     "metrics": [
       "1 ecosystem map created and published",
       "1 investor access guide produced",
@@ -130,7 +130,7 @@
     "metrics": [
       "Workshops: ≥ 5 annually; metric = # of attendees supported",
       "Businesses receiving support: +10% increase over 2025 Thrive baseline",
-      "Capital raised via GSDC pathways: Directional tracking based on ILT scholarship baseline"
+      "Capital raised via Greater St. Cloud pathways: Directional tracking based on ILT scholarship baseline"
     ],
     "notes": ""
   },
@@ -160,11 +160,11 @@
     "categoryLabel": "Pillar 3: Amplifying Return",
     "status": "not-started",
     "progress": 0,
-    "description": "Modernize GSDC's investor tiers to clearly link financial commitments with visibility, involvement, and regional impact.",
+    "description": "Modernize Greater St. Cloud's investor tiers to clearly link financial commitments with visibility, involvement, and regional impact.",
     "startQuarter": 0,
     "duration": 1,
     "leads": "NeTia (GSDC), SAC team, investor relations volunteers",
-    "timeline": "Relaunch for 2026 campaign cycle â Tier packets finalized by Q4 2025",
+    "timeline": "Relaunch for 2026 campaign cycle Ã¢ÂÂ Tier packets finalized by Q4 2025",
     "metrics": [
       "Investor renewals at same or higher tier → +10% over 2026 baseline",
       "Average annual investor contribution → +5–10% increase over 2026 baseline",
@@ -183,13 +183,13 @@
     "startQuarter": 0,
     "duration": 2,
     "leads": "Jennie and Tammy (GSDC), comms team, investor services group",
-    "timeline": "",
+    "timeline": "Launch pilot Q1 2026 → Quarterly rhythm established by Q3 2026",
     "metrics": [
       "Open & engagement rates → +10% annually over 2026 baseline",
       "Documented usage → +10% annually over 2026 baseline for # of times ROI materials are cited",
       "Quarterly satisfaction rating → Maintain ≥ 4.5/5 average score"
     ],
-    "notes": "Launch pilot Q1 2026 → Quarterly rhythm established by Q3 2026\n\nLaunch pilot Q1 2026 \nQuarterly rhythm established by Q3 2026"
+    "notes": "Launch pilot Q1 2026 â Quarterly rhythm established by Q3 2026\n\nLaunch pilot Q1 2026 \nQuarterly rhythm established by Q3 2026"
   },
   {
     "id": "p3-forums",
@@ -202,7 +202,7 @@
     "startQuarter": 1,
     "duration": 3,
     "leads": "Strategic pillar leads, comms + events team, investor ops group",
-    "timeline": "",
+    "timeline": "Start Q2 2026 → Annual calendar coordinated by end of 2025",
     "metrics": [
       "Forum attendance & cross-sector participation → +10% annually over 2026 baseline",
       "New pledges or upgraded tiers post-forum → +10% annually over 2026 baseline",
@@ -221,7 +221,7 @@
     "startQuarter": 0,
     "duration": 2,
     "leads": "GSDC staff and board with input from city/county leadership",
-    "timeline": "",
+    "timeline": "Prototype Q1 2026 → Rolling implementation thereafter",
     "metrics": [
       "% of new leaders onboarded within 60 days → +10% annually over 2026 baseline (target ≥ 80% by 2029)",
       "Awareness & satisfaction scores → Maintain or improve by +10% annually over 2026 baseline",
@@ -240,7 +240,7 @@
     "startQuarter": 2,
     "duration": 1,
     "leads": "Strategic operations staff with civic partnerships oversight",
-    "timeline": "",
+    "timeline": "Build Q3 2026 → Annual updates",
     "metrics": [
       "Contact & role data accuracy → +10% annually over 2026 baseline",
       "Participation in cross-sector efforts → +10% annually over 2026 baseline",
@@ -259,7 +259,7 @@
     "startQuarter": 1,
     "duration": 1,
     "leads": "GSDC with planning/policy partners (e.g., DEED, Initiative Foundation)",
-    "timeline": "",
+    "timeline": "Pilot Q2 2026 → Annual rhythm in 2026",
     "metrics": [
       "Attendance & repeat participation → +10% annually over 2026 baseline",
       "Knowledge retention & feedback → +10% annually over 2026 baseline",
@@ -297,7 +297,7 @@
     "startQuarter": 4,
     "duration": 2,
     "leads": "GSDC economic development team + local chambers, city staff, and SCSU research partners",
-    "timeline": "",
+    "timeline": "Begin with 2–3 priority clusters by Q1 2027",
     "metrics": [
       "Roundtable attendance & retention → +10% annually over 2026 baseline",
       "Shared needs documented → Written summary from each roundtable",
