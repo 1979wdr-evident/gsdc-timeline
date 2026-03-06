@@ -329,19 +329,19 @@
     "name": "Shared Federal Grant Calendar & Watchlist",
     "category": "addition-3",
     "categoryLabel": "Addition 3: Federal Funding Strategy",
-    "status": "not-started",
+    "status": "in-progress",
     "progress": 0,
     "description": "Maintain a central, live-updated calendar and database of upcoming federal/state grant opportunities with deadlines, partners, and alignment notes.",
     "startQuarter": 0,
     "duration": 1,
-    "leads": "GSDC staff TBD + partner staff (Initiative Foundation EDD staff)",
-    "timeline": "Launch Q1 2026; within 6 months of federal designation",
+    "leads": "GSC staff TBD + partner staff (Initiative Foundation EDD staff)",
+    "timeline": "",
     "metrics": [
       "Watchlist usage stats → +10% annually over 2026 baseline",
       "Joint applications informed by tool → +10% annually over 2026 baseline",
       "Partner satisfaction with information access → ≥ 4.5/5 average score on annual survey"
     ],
-    "notes": ""
+    "notes": "Launch Q1 2026; within 6 months of federal designation"
   },
   {
     "id": "a3-technical-assistance",
