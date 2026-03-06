@@ -462,19 +462,19 @@
     "name": "Regional Internship & First Career Connector",
     "category": "addition-5",
     "categoryLabel": "Addition 5: Talent Return",
-    "status": "not-started",
+    "status": "in-progress",
     "progress": 0,
     "description": "Curate opportunities for students and recent grads to access internships, apprenticeships, and early-career opportunities in high-need sectors.",
     "startQuarter": 2,
     "duration": 2,
     "leads": "GSDC, HR councils, SCSU and SCTCC career centers, United Way",
-    "timeline": "Pilot system by Q3 2026; annual hiring cycle support",
+    "timeline": "",
     "metrics": [
       "Internships posted & filled → +10% annually over 2026 baseline",
       "Employers using the Career Connector system → +10% annually over 2026 baseline",
       "Retention of participants in region after program → +10% annually over 2026 baseline"
     ],
-    "notes": ""
+    "notes": "Pilot system by Q3 2026; annual hiring cycle support"
   },
   {
     "id": "a5-civic-pathways",
