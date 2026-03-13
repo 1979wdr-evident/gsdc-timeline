@@ -311,18 +311,18 @@
     "category": "addition-2",
     "categoryLabel": "Addition 2: Industry Specialization",
     "status": "in-progress",
-    "progress": 0,
+    "progress": 25,
     "description": "Coordinate with workforce boards, K-12 systems, and postsecondary partners to align training, recruitment, and exposure efforts with top clusters.",
     "startQuarter": 0,
     "duration": 3,
     "leads": "GSC with workforce development boards, school districts, and postsecondary partners",
-    "timeline": "Onboarded Community Impact Intern to build and implement this initiative. ",
+    "timeline": "",
     "metrics": [
       "Students reached through exposure efforts → +10% annually over 2026 baseline",
       "Programs aligned to cluster hiring needs → +10% annually over 2026 baseline",
       "Employer satisfaction & engagement → Maintain ≥ 4.5/5 satisfaction rating"
     ],
-    "notes": "Kick off planning in Q1 2026; pilots launched Q4 2026"
+    "notes": "Onboarded Community Impact Intern to build and implement this initiative. \n\nKick off planning in Q1 2026; pilots launched Q4 2026"
   },
   {
     "id": "a3-grant-calendar",
