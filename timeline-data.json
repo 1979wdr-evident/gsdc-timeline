@@ -62,19 +62,19 @@
     "name": "Public Investment Playbook",
     "category": "pillar-1",
     "categoryLabel": "Pillar 1: Unified Regional Leadership",
-    "status": "not-started",
-    "progress": 0,
+    "status": "in-progress",
+    "progress": 10,
     "description": "A shared reference guide listing top regional infrastructure priorities with project status, costs, and lead agencies—used for strategic fundraising and alignment.",
     "startQuarter": 2,
     "duration": 1,
     "leads": "Leslie and Tammy (GSDC), joint partner task force, city/county staff",
-    "timeline": "Draft Q3 2026; updated annually",
+    "timeline": "",
     "metrics": [
       "5–8 priority projects included and tracked",
       "$5M secured by 2029",
       "≥ 50% of projects with cross-jurisdictional support"
     ],
-    "notes": ""
+    "notes": "Draft Q3 2026; updated annually"
   },
   {
     "id": "p2-startup-journey",
