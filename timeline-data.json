@@ -142,16 +142,16 @@
     "status": "not-started",
     "progress": 0,
     "description": "Help owners in transition with tools, financial matchmaking, and successor support—especially in rural and legacy sectors.",
-    "startQuarter": 1,
+    "startQuarter": 2,
     "duration": 3,
     "leads": "GSDC, CPAs, estate attorneys, local lenders",
-    "timeline": "Toolkit by Q2 2026; pilot connector launch Q4 2026",
+    "timeline": "",
     "metrics": [
       "Succession Toolkit Downloads: 60 by 2029 (≈20 annually)",
       "Transitions Supported: ≥ 5 demonstration cases",
       "Businesses Supported in Continuity: +10% average annually over 2026 baseline"
     ],
-    "notes": ""
+    "notes": "Toolkit by Q2 2026; pilot connector launch Q4 2026"
   },
   {
     "id": "p3-investor-tiers",
