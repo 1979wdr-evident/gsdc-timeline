@@ -313,10 +313,10 @@
     "status": "in-progress",
     "progress": 25,
     "description": "Coordinate with workforce boards, K-12 systems, and postsecondary partners to align training, recruitment, and exposure efforts with top clusters.",
-    "startQuarter": 0,
-    "duration": 3,
+    "startQuarter": 2,
+    "duration": 2,
     "leads": "GSC with workforce development boards, school districts, and postsecondary partners",
-    "timeline": "Kick off planning in Q1 2026; pilots launched Q4 2026",
+    "timeline": "",
     "metrics": [
       "Students reached through exposure efforts → +10% annually over 2026 baseline",
       "Programs aligned to cluster hiring needs → +10% annually over 2026 baseline",
