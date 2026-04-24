@@ -351,10 +351,10 @@
     "status": "in-progress",
     "progress": 10,
     "description": "Create a pooled resource of technical assistance hours or funding to help regional partners prepare shovel-worthy projects before grants are announced.",
-    "startQuarter": 2,
+    "startQuarter": 1,
     "duration": 1,
     "leads": "GSDC, city/county public works and economic development teams, Initiative Foundation",
-    "timeline": "By Q3 2026: Draft framework for Pre-Development TA Pool",
+    "timeline": "",
     "metrics": [
       "Projects supported pre-grant → +10% annually over 2026 baseline",
       "Funding unlocked via assistance → +10% annually over 2026 baseline",
