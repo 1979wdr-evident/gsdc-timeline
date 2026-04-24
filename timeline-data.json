@@ -465,10 +465,10 @@
     "status": "in-progress",
     "progress": 10,
     "description": "Curate opportunities for students and recent grads to access internships, apprenticeships, and early-career opportunities in high-need sectors.",
-    "startQuarter": 1,
+    "startQuarter": 3,
     "duration": 2,
     "leads": "GSDC, HR councils, SCSU and SCTCC career centers, United Way",
-    "timeline": "Pilot system by Q3 2026; annual hiring cycle support",
+    "timeline": "",
     "metrics": [
       "Internships posted & filled → +10% annually over 2026 baseline",
       "Employers using the Career Connector system → +10% annually over 2026 baseline",
