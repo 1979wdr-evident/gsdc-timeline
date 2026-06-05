@@ -253,19 +253,19 @@
     "name": "Policy Pulse Briefings",
     "category": "addition-1",
     "categoryLabel": "Addition 1: Civic Infrastructure",
-    "status": "not-started",
-    "progress": 0,
+    "status": "in-progress",
+    "progress": 19,
     "description": "Annual nonpartisan briefings for civic leaders—focused on high-priority regional topics, timelines, and coordination points.",
     "startQuarter": 1,
     "duration": 1,
     "leads": "Greater St. Cloud with planning/policy partners (e.g., DEED, Initiative Foundation)",
-    "timeline": "Pilot Q2 2026 → Annual rhythm in 2026",
+    "timeline": "",
     "metrics": [
       "Attendance & repeat participation → +10% annually over 2026 baseline",
       "Knowledge retention & feedback → +10% annually over 2026 baseline",
       "Follow-up actions initiated → +10% annually over 2026 baseline"
     ],
-    "notes": ""
+    "notes": "Pilot Q2 2026 → Annual rhythm in 2026"
   },
   {
     "id": "a2-cluster-framework",
