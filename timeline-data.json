@@ -196,19 +196,19 @@
     "name": "Investor Experience Forums & Recognition Strategy",
     "category": "pillar-3",
     "categoryLabel": "Pillar 3: Amplifying Return",
-    "status": "not-started",
-    "progress": 0,
+    "status": "in-progress",
+    "progress": 50,
     "description": "Host strategic, high-energy convenings that connect investors to outcomes, celebrate impact, and offer networking value.",
     "startQuarter": 1,
     "duration": 3,
     "leads": "Strategic pillar leads, comms + events team, investor ops group",
-    "timeline": "Start Q2 2026 → Annual calendar coordinated by end of 2025",
+    "timeline": "",
     "metrics": [
       "Forum attendance & cross-sector participation → +10% annually over 2026 baseline",
       "New pledges or upgraded tiers post-forum → +10% annually over 2026 baseline",
       "Media/social reach from recognitions → +10% annually over 2026 baseline"
     ],
-    "notes": ""
+    "notes": "Start Q2 2026 → Annual calendar coordinated by end of 2025"
   },
   {
     "id": "a1-transition-playbook",
