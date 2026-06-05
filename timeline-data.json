@@ -158,19 +158,19 @@
     "name": "Relaunched Investor Tier Model",
     "category": "pillar-3",
     "categoryLabel": "Pillar 3: Amplifying Return",
-    "status": "not-started",
-    "progress": 0,
+    "status": "completed",
+    "progress": 100,
     "description": "Modernize Greater St. Cloud's investor tiers to clearly link financial commitments with visibility, involvement, and regional impact.",
     "startQuarter": 0,
     "duration": 1,
     "leads": "NeTia (Greater St. Cloud), SAC team, investor relations volunteers",
-    "timeline": "Relaunch for 2026 campaign cycle → Tier packets finalized by Q4 2025",
+    "timeline": "",
     "metrics": [
       "Investor renewals at same or higher tier → +10% over 2026 baseline",
       "Average annual investor contribution → +5–10% increase over 2026 baseline",
       "Overall investor retention rate → maintain at ≥ 85%"
     ],
-    "notes": ""
+    "notes": "Relaunch for 2026 campaign cycle → Tier packets finalized by Q4 2025"
   },
   {
     "id": "p3-roi-dashboard",
