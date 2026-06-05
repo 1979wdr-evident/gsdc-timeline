@@ -386,19 +386,19 @@
     "name": "Regional Housing & Land Readiness Map",
     "category": "addition-4",
     "categoryLabel": "Addition 4: Housing & Land Use",
-    "status": "not-started",
-    "progress": 0,
+    "status": "in-progress",
+    "progress": 5,
     "description": "Create a shared inventory of developable land, housing pipeline projects, and zoning designations tied to regional economic needs.",
     "startQuarter": 8,
     "duration": 4,
     "leads": "Greater St. Cloud strategic ops team, city/county planners, housing agencies",
-    "timeline": "Prototype by Q1 2028; full implementation by Q4 2029",
+    "timeline": "",
     "metrics": [
       "% of jurisdictions contributing data → +10% annually over 2026 baseline",
       "Number of sites prepared for development → +10% annually over 2026 baseline",
       "Housing units & commercial projects tracked across status levels → +10% annually over baseline"
     ],
-    "notes": ""
+    "notes": "Prototype by Q1 2028; full implementation by Q4 2029"
   },
   {
     "id": "a4-alignment-cohort",
