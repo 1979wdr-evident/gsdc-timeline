@@ -63,18 +63,18 @@
     "category": "pillar-1",
     "categoryLabel": "Pillar 1: Unified Regional Leadership",
     "status": "not-started",
-    "progress": 0,
+    "progress": 50,
     "description": "A shared reference guide listing top regional infrastructure priorities with project status, costs, and lead agencies—used for strategic fundraising and alignment.",
-    "startQuarter": 2,
+    "startQuarter": 1,
     "duration": 1,
     "leads": "Leslie and Tammy (Greater St. Cloud), joint partner task force, city/county staff",
-    "timeline": "Draft Q3 2026; updated annually",
+    "timeline": "",
     "metrics": [
       "5–8 priority projects included and tracked",
       "$5M secured by 2029",
       "≥ 50% of projects with cross-jurisdictional support"
     ],
-    "notes": ""
+    "notes": "Draft Q3 2026; updated annually"
   },
   {
     "id": "p2-startup-journey",
