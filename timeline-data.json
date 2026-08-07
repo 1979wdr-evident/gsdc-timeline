@@ -482,17 +482,17 @@
     "category": "addition-5",
     "categoryLabel": "Addition 5: Talent Return",
     "status": "not-started",
-    "progress": 0,
+    "progress": 5,
     "description": "Partner with civic orgs, boards, and community initiatives to create clearer ways for young professionals to engage in public life.",
     "startQuarter": 4,
     "duration": 2,
     "leads": "Greater St. Cloud Talent and Leadership teams, Rotary/YP groups, public sector partners",
-    "timeline": "Launch Map Q1 2027; Board Match kickoff by Q1 2028",
+    "timeline": "",
     "metrics": [
       "Participants matched to civic boards/programs → +10% annually over 2026 baseline",
       "Repeat civic engagement rates → +10% annually over 2026 baseline",
       "Satisfaction with leadership experiences → Maintain ≥ 4.5/5 survey rating"
     ],
-    "notes": ""
+    "notes": "Launch Map Q1 2027; Board Match kickoff by Q1 2028"
   }
 ]
